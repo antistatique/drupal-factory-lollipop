@@ -14,6 +14,7 @@
     <exclude name="ElseExpression" />
     <exclude name="StaticAccess" />
     <exclude name="BooleanArgumentFlag" />
+    <exclude name="MissingImport" />
   </rule>
   <rule ref="rulesets/codesize.xml">
     <exclude name="NPathComplexity" />
@@ -43,10 +44,16 @@
   <rule ref="rulesets/naming.xml">
      <exclude name="ShortVariable" />
      <exclude name="ShortMethodName" />
+     <exclude name="LongVariable" />
   </rule>
   <rule ref="rulesets/naming.xml/ShortVariable">
     <properties>
-      <property name="exceptions" value="id,q,i,j,v,e,f,fp,dn,me,ip,dt,d" />
+      <property name="exceptions" value="id,q,i,j,v,e,f,fp,dn,me,ip,dt,d,n" />
+    </properties>
+  </rule>
+  <rule ref="rulesets/naming.xml/LongVariable">
+    <properties>
+      <property name="maximum" description="The variable length reporting threshold" value="30"/>
     </properties>
   </rule>
   <rule ref="rulesets/naming.xml/ShortMethodName">
