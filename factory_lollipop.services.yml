@@ -1,4 +1,9 @@
 services:
+  factory_lollipop.fixture_factory:
+    class: Drupal\factory_lollipop\FixtureFactory
+    arguments:
+      - '@factory_lollipop.factory_type.chain_resolver'
+      - '@factory_lollipop.factory.chain_resolver'
 
   factory_lollipop.factory_type.chain_resolver:
     class: Drupal\factory_lollipop\Resolver\ChainFactoryTypeResolver
