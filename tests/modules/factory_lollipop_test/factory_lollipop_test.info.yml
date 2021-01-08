@@ -1,0 +1,8 @@
+name: Factory Lollipop Test
+type: module
+description: Contains various example of Factory Lollipop usage.
+package: Testing
+core_version_requirement: ^8.8 || ^9
+
+dependencies:
+  - factory_lollipop:factory_lollipop
