@@ -89,7 +89,7 @@ Detect overcomplicated expressions & Unused parameters, methods, properties.
 
   ```
   $ docker-compose exec drupal phpmd ./web/modules/contrib/factory_lollipop/ text ./phpmd.xml \
-  --suffixes php,module,inc,install,test,profile,theme,css,info,txt --exclude *Test.php
+  --suffixes php,module,inc,install,test,profile,theme,css,info,txt --exclude *Test.php,*vendor/*
   ```
 
 #### Running PHP Copy/Paste Detector
@@ -99,9 +99,7 @@ https://github.com/sebastianbergmann/phpcpd
 `phpcpd` is a Copy/Paste Detector (CPD) for PHP code.
 
   ```
-  $ docker-compose exec drupal phpcpd ./web/modules/contrib/factory_lollipop/ \
-    --names=*.php,*.module,*.inc,*.install,*.test,*.profile,*.theme,*.css,*.info,*.txt --names-exclude=*.md,*.info.yml \
-    --ansi --exclude=tests
+  $ docker-compose exec drupal phpcpd ./web/modules/contrib/factory_lollipop/src --suffix .php --suffix .module --suffix .inc --suffix .install --suffix .test --suffix .profile --suffix .theme --suffix .css --suffix .info --suffix .txt --exclude *.md --exclude *.info.yml --exclude tests --exclude vendor/
   ```
 
 ### Enforce code standards with git hooks
