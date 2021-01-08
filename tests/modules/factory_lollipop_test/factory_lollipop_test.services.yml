@@ -1,0 +1,7 @@
+services:
+
+## Factories
+  factory_lollipop.factories.node_type.article:
+    class: Drupal\factory_lollipop_test\Factories\NodeTypeArticleFactory
+    tags:
+      - { name: factory_lollipop.factory_resolver, priority: 1 }
