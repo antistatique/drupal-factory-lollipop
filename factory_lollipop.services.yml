@@ -1,0 +1,11 @@
+services:
+
+  factory_lollipop.factory_type.chain_resolver:
+    class: Drupal\factory_lollipop\Resolver\ChainFactoryTypeResolver
+    tags:
+      - { name: service_collector, call: addResolver, tag: factory_lollipop.factory_type_resolver }
+
+  factory_lollipop.factory.chain_resolver:
+    class: Drupal\factory_lollipop\Resolver\ChainFactoryResolver
+    tags:
+      - { name: service_collector, call: addResolver, tag: factory_lollipop.factory_resolver }
