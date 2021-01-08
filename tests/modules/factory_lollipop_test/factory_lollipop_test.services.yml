@@ -5,3 +5,9 @@ services:
     class: Drupal\factory_lollipop_test\Factories\NodeTypeArticleFactory
     tags:
       - { name: factory_lollipop.factory_resolver, priority: 1 }
+
+  factory_lollipop.factories.node.article:
+    class: Drupal\factory_lollipop_test\Factories\NodeArticleFactory
+    tags:
+      - { name: factory_lollipop.factory_resolver, priority: 10 }
+
