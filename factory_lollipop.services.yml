@@ -14,3 +14,12 @@ services:
     class: Drupal\factory_lollipop\Resolver\ChainFactoryResolver
     tags:
       - { name: service_collector, call: addResolver, tag: factory_lollipop.factory_resolver }
+
+## Factory Types
+
+  factory_lollipop.factory_type.node_type:
+    class: Drupal\factory_lollipop\FactoryType\NodeTypeFactoryType
+    tags:
+      - { name: factory_lollipop.factory_type_resolver, priority: 205 }
+    calls:
+      - [setEntityTypeManager, ['@entity_type.manager']]
