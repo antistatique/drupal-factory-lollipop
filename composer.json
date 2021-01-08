@@ -1,0 +1,27 @@
+{
+  "name": "drupal/factory_lollipop",
+  "description": "Factory Lollipop is a comprehensive solution for using the factory pattern to generate short-lived test data (fixtures).",
+  "type": "drupal-module",
+  "homepage": "https://www.drupal.org/project/factory_lollipop",
+  "authors": [
+    {
+      "name": "Antistatique",
+      "email": "info@antistatique.net",
+      "homepage": "https://www.antistatique.net",
+      "role": "Sponsor"
+    },
+    {
+      "name": "Kevin Wenger",
+      "email": "contact@kevin-wenger.ch",
+      "homepage": "https://www.drupal.org/u/wengerk",
+      "role": "Author & Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/factory_lollipop"
+  },
+  "license": "GPL-2.0-or-later",
+  "require-dev": {
+    "drupal/coder": "^8.3.1"
+  }
+}
