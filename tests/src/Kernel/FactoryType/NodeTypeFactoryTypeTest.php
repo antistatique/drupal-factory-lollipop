@@ -25,6 +25,7 @@ class NodeTypeFactoryTypeTest extends EntityKernelTestBase {
   public function setUp(): void {
     parent::setUp();
     $this->nodeTypeFactoryTypeResolver = new NodeTypeFactoryType();
+    $this->nodeTypeFactoryTypeResolver->setEntityTypeManager($this->container->get('entity_type.manager'));
   }
 
   /**
