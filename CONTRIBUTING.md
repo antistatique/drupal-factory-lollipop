@@ -54,6 +54,7 @@ During Docker build, the following Static Analyzers will be installed on the Doc
 The following Analyzer will be downloaded & installed as PHAR:
 
 - `phpmd/phpmd`
+- `sebastian/phpcpd`
 
 ### Command Line Usage
 
@@ -89,6 +90,18 @@ Detect overcomplicated expressions & Unused parameters, methods, properties.
   ```
   $ docker-compose exec drupal phpmd ./web/modules/contrib/factory_lollipop/ text ./phpmd.xml \
   --suffixes php,module,inc,install,test,profile,theme,css,info,txt --exclude *Test.php
+  ```
+
+#### Running PHP Copy/Paste Detector
+
+https://github.com/sebastianbergmann/phpcpd
+
+`phpcpd` is a Copy/Paste Detector (CPD) for PHP code.
+
+  ```
+  $ docker-compose exec drupal phpcpd ./web/modules/contrib/factory_lollipop/ \
+    --names=*.php,*.module,*.inc,*.install,*.test,*.profile,*.theme,*.css,*.info,*.txt --names-exclude=*.md,*.info.yml \
+    --ansi --exclude=tests
   ```
 
 ### Enforce code standards with git hooks

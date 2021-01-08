@@ -16,3 +16,9 @@ RUN set -eux; \
   curl -LJO https://phpmd.org/static/latest/phpmd.phar; \
   chmod +x phpmd.phar; \
   mv phpmd.phar /usr/bin/phpmd
+
+# Download & install PHPCPD.
+RUN set -eux; \
+  curl -LJO https://phar.phpunit.de/phpcpd.phar; \
+  chmod +x phpcpd.phar; \
+  mv phpcpd.phar /usr/bin/phpcpd
