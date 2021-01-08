@@ -1,4 +1,4 @@
-name: code-styles
+name: Code styles
 on: [pull_request]
 
 jobs:
