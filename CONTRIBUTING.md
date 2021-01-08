@@ -44,3 +44,44 @@ We use the [Docker for Drupal Contrib images](https://hub.docker.com/r/wengerk/d
 Run testing by stopping at first failure using the following command:
 
     docker-compose exec -u www-data drupal phpunit --group=factory_lollipop --no-coverage --stop-on-failure --configuration=/var/www/html/phpunit.xml
+
+## 🚔 Check Drupal coding standards & Drupal best practices
+
+During Docker build, the following Static Analyzers will be installed on the Docker `drupal` via Composer:
+
+- `drupal/coder^8.3.1`  (including `squizlabs/php_codesniffer` & `phpstan/phpstan`),
+
+The following Analyzer will be downloaded & installed as PHAR:
+
+### Command Line Usage
+
+    ./scripts/hooks/post-commit
+    # or run command on the container itself
+    docker-compose exec drupal bash
+
+#### Running Code Sniffer Drupal & DrupalPractice
+
+https://github.com/squizlabs/PHP_CodeSniffer
+
+PHP_CodeSniffer is a set of two PHP scripts; the main `phpcs` script that tokenizes PHP, JavaScript and CSS files to
+detect violations of a defined coding standard, and a second `phpcbf` script to automatically correct coding standard
+violations.
+PHP_CodeSniffer is an essential development tool that ensures your code remains clean and consistent.
+
+  ```
+  $ docker-compose exec drupal ./vendor/bin/phpcs ./web/modules/contrib/factory_lollipop/
+  ```
+
+Automatically fix coding standards
+
+  ```
+  $ docker-compose exec drupal ./vendor/bin/phpcbf ./web/modules/contrib/factory_lollipop/
+  ```
+
+### Enforce code standards with git hooks
+
+Maintaining code quality by adding the custom post-commit hook to yours.
+
+  ```bash
+  cat ./scripts/hooks/post-commit >> ./.git/hooks/post-commit
+  ```

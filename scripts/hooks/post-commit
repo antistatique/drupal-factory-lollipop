@@ -1,0 +1,2 @@
+echo "\n🚔  \033[0;32mRunning Code Sniffer Drupal & DrupalPractice for ./web/modules/contrib/factory_lollipop/ ...\033[0m"
+docker-compose exec drupal ./vendor/bin/phpcs ./web/modules/contrib/factory_lollipop/
