@@ -10,3 +10,9 @@ RUN ./vendor/bin/phpcs --config-set installed_paths \
 
 # Copy the Analyzer definition files to ease run.
 COPY phpcs.xml.dist phpmd.xml ./
+
+# Download & install PHPMD.
+RUN set -eux; \
+  curl -LJO https://phpmd.org/static/latest/phpmd.phar; \
+  chmod +x phpmd.phar; \
+  mv phpmd.phar /usr/bin/phpmd

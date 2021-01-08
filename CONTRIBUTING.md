@@ -53,6 +53,8 @@ During Docker build, the following Static Analyzers will be installed on the Doc
 
 The following Analyzer will be downloaded & installed as PHAR:
 
+- `phpmd/phpmd`
+
 ### Command Line Usage
 
     ./scripts/hooks/post-commit
@@ -76,6 +78,17 @@ Automatically fix coding standards
 
   ```
   $ docker-compose exec drupal ./vendor/bin/phpcbf ./web/modules/contrib/factory_lollipop/
+  ```
+
+#### Running PHP Mess Detector
+
+https://github.com/phpmd/phpmd
+
+Detect overcomplicated expressions & Unused parameters, methods, properties.
+
+  ```
+  $ docker-compose exec drupal phpmd ./web/modules/contrib/factory_lollipop/ text ./phpmd.xml \
+  --suffixes php,module,inc,install,test,profile,theme,css,info,txt --exclude *Test.php
   ```
 
 ### Enforce code standards with git hooks
