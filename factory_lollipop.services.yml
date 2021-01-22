@@ -75,6 +75,13 @@ services:
     calls:
       - [setEntityTypeManager, ['@entity_type.manager']]
 
+  factory_lollipop.factory_type.menu_link:
+    class: Drupal\factory_lollipop\FactoryType\MenuLinkFactoryType
+    tags:
+      - { name: factory_lollipop.factory_type_resolver, priority: 230 }
+    calls:
+      - [setEntityTypeManager, ['@entity_type.manager']]
+
   factory_lollipop.factory_type.media_type:
     class: Drupal\factory_lollipop\FactoryType\MediaTypeFactoryType
     tags:
