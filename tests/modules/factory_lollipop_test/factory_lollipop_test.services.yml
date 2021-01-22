@@ -15,3 +15,9 @@ services:
     class: Drupal\factory_lollipop_test\Factories\VocabularyFactory
     tags:
       - { name: factory_lollipop.factory_resolver, priority: 60 }
+
+  factory_lollipop.factories.taxonomy.term.tags:
+    class: Drupal\factory_lollipop_test\Factories\TaxonomyTermTagsFactory
+    tags:
+      - { name: factory_lollipop.factory_resolver, priority: 60 }
+
