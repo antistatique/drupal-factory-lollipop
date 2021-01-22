@@ -36,3 +36,7 @@ services:
     tags:
       - { name: factory_lollipop.factory_resolver, priority: 60 }
 
+  factory_lollipop.factories.media.type.image:
+    class: Drupal\factory_lollipop_test\Factories\MediaTypeImageFactory
+    tags:
+      - { name: factory_lollipop.factory_resolver, priority: 70 }
