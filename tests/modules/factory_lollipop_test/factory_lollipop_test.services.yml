@@ -40,3 +40,8 @@ services:
     class: Drupal\factory_lollipop_test\Factories\MediaTypeImageFactory
     tags:
       - { name: factory_lollipop.factory_resolver, priority: 70 }
+
+  factory_lollipop.factories.media.image:
+    class: Drupal\factory_lollipop_test\Factories\MediaImageFactory
+    tags:
+      - { name: factory_lollipop.factory_resolver, priority: 70 }
