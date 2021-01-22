@@ -16,6 +16,15 @@ services:
       - { name: service_collector, call: addResolver, tag: factory_lollipop.factory_resolver }
 
 ## Factory Types
+  factory_lollipop.factory_type.file:
+    class: Drupal\factory_lollipop\FactoryType\FileFactoryType
+    tags:
+      - { name: factory_lollipop.factory_type_resolver, priority: 100 }
+    arguments:
+      - '@config.factory'
+      - '@file_system'
+    calls:
+      - [setEntityTypeManager, ['@entity_type.manager']]
 
   factory_lollipop.factory_type.node_type:
     class: Drupal\factory_lollipop\FactoryType\NodeTypeFactoryType
