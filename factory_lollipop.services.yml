@@ -44,3 +44,10 @@ services:
       - { name: factory_lollipop.factory_type_resolver, priority: 215 }
     calls:
       - [setEntityTypeManager, ['@entity_type.manager']]
+
+  factory_lollipop.factory_type.user:
+    class: Drupal\factory_lollipop\FactoryType\UserFactoryType
+    tags:
+      - { name: factory_lollipop.factory_type_resolver, priority: 220 }
+    calls:
+      - [setEntityTypeManager, ['@entity_type.manager']]
