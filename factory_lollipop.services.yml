@@ -67,3 +67,10 @@ services:
       - { name: factory_lollipop.factory_type_resolver, priority: 220 }
     calls:
       - [setEntityTypeManager, ['@entity_type.manager']]
+
+  factory_lollipop.factory_type.media_type:
+    class: Drupal\factory_lollipop\FactoryType\MediaTypeFactoryType
+    tags:
+      - { name: factory_lollipop.factory_type_resolver, priority: 240 }
+    calls:
+      - [setEntityTypeManager, ['@entity_type.manager']]
