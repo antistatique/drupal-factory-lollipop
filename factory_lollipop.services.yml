@@ -26,6 +26,13 @@ services:
     calls:
       - [setEntityTypeManager, ['@entity_type.manager']]
 
+  factory_lollipop.factory_type.field:
+    class: Drupal\factory_lollipop\FactoryType\EntityFieldFactoryType
+    tags:
+      - { name: factory_lollipop.factory_type_resolver, priority: 200 }
+    calls:
+      - [setEntityTypeManager, ['@entity_type.manager']]
+
   factory_lollipop.factory_type.node_type:
     class: Drupal\factory_lollipop\FactoryType\NodeTypeFactoryType
     tags:
