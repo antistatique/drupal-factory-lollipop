@@ -30,3 +30,10 @@ services:
       - { name: factory_lollipop.factory_type_resolver, priority: 210 }
     calls:
       - [setEntityTypeManager, ['@entity_type.manager']]
+
+  factory_lollipop.factory_type.taxonomy.vocabulary:
+    class: Drupal\factory_lollipop\FactoryType\VocabularyFactoryType
+    tags:
+      - { name: factory_lollipop.factory_type_resolver, priority: 215 }
+    calls:
+      - [setEntityTypeManager, ['@entity_type.manager']]
