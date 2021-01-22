@@ -11,6 +11,12 @@ services:
     tags:
       - { name: factory_lollipop.factory_resolver, priority: 10 }
 
+
+  factory_lollipop.factories.role:
+    class: Drupal\factory_lollipop_test\Factories\RoleFactory
+    tags:
+      - { name: factory_lollipop.factory_resolver, priority: 30 }
+
   factory_lollipop.factories.user:
     class: Drupal\factory_lollipop_test\Factories\UserFactory
     tags:
