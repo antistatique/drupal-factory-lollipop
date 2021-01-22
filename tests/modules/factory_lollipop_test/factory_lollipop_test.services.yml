@@ -26,6 +26,11 @@ services:
     tags:
       - { name: factory_lollipop.factory_resolver, priority: 35 }
 
+  factory_lollipop.factories.menu:
+    class: Drupal\factory_lollipop_test\Factories\MenuFactory
+    tags:
+      - { name: factory_lollipop.factory_resolver, priority: 50 }
+
   factory_lollipop.factories.taxonomy.vocabulary:
     class: Drupal\factory_lollipop_test\Factories\VocabularyFactory
     tags:
