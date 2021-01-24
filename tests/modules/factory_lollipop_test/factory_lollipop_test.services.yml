@@ -11,6 +11,11 @@ services:
     tags:
       - { name: factory_lollipop.factory_resolver, priority: 10 }
 
+  factory_lollipop.factories.node.page:
+    class: Drupal\factory_lollipop_test\Factories\NodePageFactory
+    tags:
+      - { name: factory_lollipop.factory_resolver, priority: 10 }
+
   factory_lollipop.factories.file:
     class: Drupal\factory_lollipop_test\Factories\FileFactory
     tags:
@@ -51,6 +56,11 @@ services:
     tags:
       - { name: factory_lollipop.factory_resolver, priority: 60 }
 
+  factory_lollipop.factories.taxonomy.term.countries:
+    class: Drupal\factory_lollipop_test\Factories\TaxonomyTermCountriesFactory
+    tags:
+      - { name: factory_lollipop.factory_resolver, priority: 60 }
+
   factory_lollipop.factories.media.type.image:
     class: Drupal\factory_lollipop_test\Factories\MediaTypeImageFactory
     tags:
@@ -58,5 +68,10 @@ services:
 
   factory_lollipop.factories.media.image:
     class: Drupal\factory_lollipop_test\Factories\MediaImageFactory
+    tags:
+      - { name: factory_lollipop.factory_resolver, priority: 70 }
+
+  factory_lollipop.factories.media.file:
+    class: Drupal\factory_lollipop_test\Factories\MediaFileFactory
     tags:
       - { name: factory_lollipop.factory_resolver, priority: 70 }
