@@ -28,7 +28,9 @@ class HelpTest extends BrowserTestBase {
   protected $defaultTheme = 'stark';
 
   /**
-   * The admin user that will be created.
+   * The admin user.
+   *
+   * @var \Drupal\user\UserInterface
    */
   protected $adminUser;
 
