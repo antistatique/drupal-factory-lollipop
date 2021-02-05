@@ -28,11 +28,11 @@ They can be used anywhere in your tests and in your before and after test setup.
 
 ## Usage
 
-Check out the [official documentation]() about Factory Lollipop.
+Check out the [official documentation](https://www.drupal.org/docs/contributed-modules/factory-lollipop) about Factory Lollipop.
 
 You may also be interested in this article about Factory Lollipop:
 
-  * [Kevin Wenger's](https://github.com/wengerk) article is available [here](http://culttt.com/2013/05/27/laravel-4-fixture-replacement-with-factorymuff/).
+  * [Kevin Wenger's](https://github.com/wengerk) article is available [here]().
 
 Two submodules provide examples of implementing Factory Lollipop.
 
@@ -61,7 +61,7 @@ At present, Factory Lollipop has support for the following types of data in Drup
   * Media Type
   * Media
 
-You can easily add/override any FactoryType by using the FactoryType Resolver. See the [official documentation]() about it.
+You can easily add/override any FactoryType by using the FactoryType Resolver. See the [official documentation](https://www.drupal.org/docs/contributed-modules/factory-lollipop) about it.
 
 ## Getting Started
 
