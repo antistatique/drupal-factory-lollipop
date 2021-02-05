@@ -1,6 +1,6 @@
 {
   "name": "drupal/factory_lollipop",
-  "description": "Factory Lollipop is a comprehensive solution for using the factory pattern to generate short-lived test data (fixtures).",
+  "description": "Factory Lollipop is a comprehensive solution for using the factory pattern to generate short-lived test data-structure.",
   "type": "drupal-module",
   "homepage": "https://www.drupal.org/project/factory_lollipop",
   "authors": [

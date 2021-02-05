@@ -1,5 +1,5 @@
 name: Factory Lollipop
-description: 'Factory Lollipop is a comprehensive solution for using the factory pattern to generate short-lived test data (fixtures).'
+description: 'Factory Lollipop is a comprehensive solution for using the factory pattern to generate short-lived test data-structure.'
 package: 'Development'
 type: module
 core_version_requirement: ^8.8 || ^9
