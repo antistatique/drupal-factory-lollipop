@@ -8,6 +8,7 @@ use Drupal\Tests\system\Functional\Module\ModuleTestBase;
  * Tests install / uninstall of Factory Lollipop.
  *
  * @group factory_lollipop
+ * @group factory_lollipop_functional
  */
 class InstallUninstallTest extends ModuleTestBase {
 

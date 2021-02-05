@@ -8,6 +8,7 @@ use Drupal\Tests\BrowserTestBase;
  * Verify help display and user access to help based on permissions.
  *
  * @group factory_lollipop
+ * @group factory_lollipop_functional
  */
 class HelpTest extends BrowserTestBase {
 
@@ -46,16 +47,13 @@ class HelpTest extends BrowserTestBase {
       'view the administration theme',
       'administer permissions',
     ]);
+    $this->drupalLogin($this->adminUser);
   }
 
   /**
    * Logs in users, tests help page.
    */
   public function testHelp() {
-    // Log in the admin user to ensure as many admin links appear as possible on
-    // the module overview pages.
-    $this->drupalLogin($this->adminUser);
-
     $this->drupalGet('admin/help/factory_lollipop');
     $this->assertSession()->statusCodeEquals(200);
   }
