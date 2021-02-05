@@ -1,4 +1,5 @@
 <?php
+// phpcs:ignoreFile
 
 namespace Drupal\factory_lollipop\Traits;
 
@@ -22,6 +23,7 @@ use Drupal\user\RoleInterface;
  * directory can't be used by Class outside of tests.
  *
  * @see \Drupal\Tests\user\Traits\UserCreationTrait
+ * @SuppressWarnings(PHPMD)
  */
 trait UserCreationTrait {
 

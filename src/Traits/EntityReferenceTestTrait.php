@@ -1,4 +1,5 @@
 <?php
+// phpcs:ignoreFile
 
 namespace Drupal\factory_lollipop\Traits;
 
