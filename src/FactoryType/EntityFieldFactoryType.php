@@ -3,7 +3,7 @@
 namespace Drupal\factory_lollipop\FactoryType;
 
 use Drupal\field\FieldConfigInterface;
-use Drupal\Tests\RandomGeneratorTrait;
+use Drupal\factory_lollipop\Traits\RandomGeneratorTrait;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 
 /**

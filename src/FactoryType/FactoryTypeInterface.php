@@ -5,7 +5,7 @@ namespace Drupal\factory_lollipop\FactoryType;
 /**
  * Provides the base interface for Factory Type.
  *
- * Factory Type define how a certain type of data (Nodes, Tersm, ...)
+ * Factory Type define how a certain type of data (Nodes, Terms, ...)
  * will created.
  * Many Factory Type may be available but only one will be applied to create
  * the final entity for testing.
