@@ -110,6 +110,7 @@ Factory Lollipop requires PHP 7.3+ to works properly. We recommend updating to a
 
   * [Factory Muffin](https://github.com/thephpleague/factory-muffin) Enables the rapid creation of objects for testing. It's basically a "Factory Bot", simplified for use with PHP.
   * [Foundry](https://github.com/zenstruck/foundry) A model factory library for creating expressive, auto-completable, on-demand dev/test fixtures with Symfony and Doctrine.
+  * [Phactory](https://github.com/chriskite/phactory) A Database Factory for PHP Unit Tests.
   * [Factory Bot](https://github.com/thoughtbot/factory_bot) A library for setting up Ruby objects as test data.
   * [Sham](https://github.com/panthomakos/sham/) Lightweight flexible factories for Ruby and Rails testing.
 
