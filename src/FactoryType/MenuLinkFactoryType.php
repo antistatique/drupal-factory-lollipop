@@ -4,7 +4,7 @@ namespace Drupal\factory_lollipop\FactoryType;
 
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\menu_link_content\MenuLinkContentInterface;
-use Drupal\Tests\RandomGeneratorTrait;
+use Drupal\factory_lollipop\Traits\RandomGeneratorTrait;
 
 /**
  * Creates Drupal Menu Link for use in tests.

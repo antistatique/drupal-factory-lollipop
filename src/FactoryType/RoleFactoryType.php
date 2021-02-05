@@ -3,8 +3,8 @@
 namespace Drupal\factory_lollipop\FactoryType;
 
 use Drupal\Core\Entity\EntityTypeManagerInterface;
-use Drupal\Tests\RandomGeneratorTrait;
-use Drupal\Tests\user\Traits\UserCreationTrait;
+use Drupal\factory_lollipop\Traits\RandomGeneratorTrait;
+use Drupal\factory_lollipop\Traits\UserCreationTrait;
 use Drupal\user\RoleInterface;
 
 /**

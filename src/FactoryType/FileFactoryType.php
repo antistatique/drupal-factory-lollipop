@@ -6,7 +6,7 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\File\FileSystemInterface;
 use Drupal\file\FileInterface;
-use Drupal\Tests\RandomGeneratorTrait;
+use Drupal\factory_lollipop\Traits\RandomGeneratorTrait;
 
 /**
  * Creates Drupal Files for use in tests.

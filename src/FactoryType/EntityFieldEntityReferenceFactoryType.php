@@ -4,8 +4,8 @@ namespace Drupal\factory_lollipop\FactoryType;
 
 use Drupal\field\Entity\FieldConfig;
 use Drupal\field\FieldConfigInterface;
-use Drupal\Tests\field\Traits\EntityReferenceTestTrait;
-use Drupal\Tests\RandomGeneratorTrait;
+use Drupal\factory_lollipop\Traits\EntityReferenceTestTrait;
+use Drupal\factory_lollipop\Traits\RandomGeneratorTrait;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 
 /**

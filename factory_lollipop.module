@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * Contains includes hook to generate help page.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function factory_lollipop_help($route_name, RouteMatchInterface $route_match) {
+  if ($route_name !== 'help.page.factory_lollipop') {
+    return NULL;
+  }
+
+  $text = file_get_contents(__DIR__ . '/README.md');
+
+  if (!\Drupal::moduleHandler()->moduleExists('markdown')) {
+    return '<pre>' . $text . '</pre>';
+  }
+
+  // Use the Markdown filter to render the README.
+  $filter_manager = \Drupal::service('plugin.manager.filter');
+  $settings = \Drupal::configFactory()->get('markdown.settings')->getRawData();
+  $config = ['settings' => $settings];
+  $filter = $filter_manager->createInstance('markdown', $config);
+
+  return $filter->process($text, 'en');
+}

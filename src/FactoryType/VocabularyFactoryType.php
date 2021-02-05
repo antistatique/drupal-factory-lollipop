@@ -4,7 +4,7 @@ namespace Drupal\factory_lollipop\FactoryType;
 
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\taxonomy\VocabularyInterface;
-use Drupal\Tests\RandomGeneratorTrait;
+use Drupal\factory_lollipop\Traits\RandomGeneratorTrait;
 
 /**
  * Creates Drupal Vocabulary for use in tests.
