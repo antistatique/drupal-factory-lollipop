@@ -83,7 +83,6 @@ Factory Lollipop is available for both Drupal 8 and Drupal 9!
 
 |Drupal Core|Factory Lollipop|
 |:---------:|:--------------:|
-|8.9.x      |1.0.x           |
 |9.x        |1.0.x           |
 
 ## Roadmap
