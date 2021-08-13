@@ -24,7 +24,7 @@ class RoleFactoryTest extends LollipopKernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public static $modules = [
+  protected static $modules = [
     'user',
     'factory_lollipop_test',
   ];

@@ -32,7 +32,7 @@ class MenuLinkFactoryTypeTest extends EntityKernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public static $modules = [
+  protected static $modules = [
     'link',
     'menu_link_content',
   ];

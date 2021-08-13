@@ -16,7 +16,7 @@ class FileFactoryTest extends LollipopKernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public static $modules = [
+  protected static $modules = [
     'file',
     'factory_lollipop_test',
   ];

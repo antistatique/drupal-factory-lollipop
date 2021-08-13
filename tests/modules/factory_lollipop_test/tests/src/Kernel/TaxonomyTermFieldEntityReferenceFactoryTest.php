@@ -17,7 +17,7 @@ class TaxonomyTermFieldEntityReferenceFactoryTest extends LollipopKernelTestBase
   /**
    * {@inheritdoc}
    */
-  public static $modules = [
+  protected static $modules = [
     'taxonomy',
     'factory_lollipop_test',
   ];
@@ -25,7 +25,7 @@ class TaxonomyTermFieldEntityReferenceFactoryTest extends LollipopKernelTestBase
   /**
    * {@inheritdoc}
    */
-  protected function setUp() {
+  protected function setUp(): void {
     parent::setUp();
 
     // Create an entity test.

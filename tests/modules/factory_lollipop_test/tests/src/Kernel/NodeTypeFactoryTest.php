@@ -24,7 +24,7 @@ class NodeTypeFactoryTest extends LollipopKernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public static $modules = [
+  protected static $modules = [
     'node',
     'factory_lollipop_test',
   ];

@@ -25,7 +25,7 @@ class MediaTypeFactoryTest extends LollipopKernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public static $modules = [
+  protected static $modules = [
     'media',
     'file',
     'image',

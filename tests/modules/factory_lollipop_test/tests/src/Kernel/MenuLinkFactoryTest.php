@@ -26,7 +26,7 @@ class MenuLinkFactoryTest extends LollipopKernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public static $modules = [
+  protected static $modules = [
     'link',
     'menu_link_content',
     'factory_lollipop_test',
