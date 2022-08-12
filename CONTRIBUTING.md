@@ -1,9 +1,18 @@
 # Developing on Factory Lollipop
 
+* Issues should be filed at
+https://www.drupal.org/project/issues/factory_lollipop
 * Pull requests can be made against
 https://github.com/antistatique/drupal-factory-lollipop/pulls
 
 ## 📦 Repositories
+
+Drupal repo
+
+  ```bash
+  git remote add drupal \
+  git@git.drupal.org:project/factory_lollipop.git
+  ```
 
 Github repo
 
@@ -26,7 +35,7 @@ on your environment:
 
 Once run, you will be able to access to your fresh installed Drupal on `localhost::8888`.
 
-    docker-compose build --pull --build-arg BASE_IMAGE_TAG=8.9 drupal
+    docker-compose build --pull --build-arg BASE_IMAGE_TAG=9.0 drupal
     # (get a coffee, this will take some time...)
     docker-compose up -d drupal
     docker-compose exec -u www-data drupal drush site-install standard --db-url="mysql://drupal:drupal@db/drupal" -y
