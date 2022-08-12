@@ -1,5 +1,8 @@
 name: Continuous integration
-on: [pull_request]
+on:
+  push:
+  schedule:
+    - cron: '0 0 * * THU'
 
 jobs:
   tests:
