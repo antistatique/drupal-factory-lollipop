@@ -43,6 +43,7 @@ class UserFactoryTest extends LollipopKernelTestBase {
 
     $role = Role::create([
       'id' => 'moderator',
+      'label' => 'moderator',
       'permissions' => ['administer comments'],
     ]);
     $role->save();

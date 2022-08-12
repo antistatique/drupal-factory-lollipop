@@ -83,7 +83,7 @@ class UserFactoryTypeTest extends EntityKernelTestBase {
   public function testCreateWithRoles(): void {
     $role1 = Role::create([
       'id' => 'test_role1',
-      'name' => $this->randomString(),
+      'label' => $this->randomString(),
     ]);
     $role1->save();
 
