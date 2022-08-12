@@ -12,11 +12,14 @@ jobs:
 
     strategy:
       matrix:
-        drupal_version: ['9.0', '9.1', '9.2']
+        drupal_version: ['9.1', '9.2', '9.3', '9.4', '9.5', '10']
         module: ['factory_lollipop']
         experimental: [ false ]
         include:
-          - drupal_version: '9.3'
+          - drupal_version: '9.5'
+            module: 'factory_lollipop'
+            experimental: true
+          - drupal_version: '10'
             module: 'factory_lollipop'
             experimental: true
 
@@ -42,11 +45,14 @@ jobs:
 
     strategy:
       matrix:
-        drupal_version: ['9.0', '9.1', '9.2']
+        drupal_version: ['9.1', '9.2', '9.3', '9.4', '9.5', '10']
         module: [ 'factory_lollipop' ]
         experimental: [ false ]
         include:
-          - drupal_version: '9.3'
+          - drupal_version: '9.5'
+            module: 'factory_lollipop'
+            experimental: true
+          - drupal_version: '10'
             module: 'factory_lollipop'
             experimental: true
 
