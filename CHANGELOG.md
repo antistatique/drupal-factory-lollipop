@@ -18,3 +18,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## 1.0.0 - 2022-08-12
 ### Added
 - init module
+
+[Unreleased]: https://github.com/antistatique/drupal-factory-lollipop/compare/1.0.0...HEAD
+[1.0.0]: https://github.com/antistatique/drupal-factory-lollipop/releases/tags/1.0.0
