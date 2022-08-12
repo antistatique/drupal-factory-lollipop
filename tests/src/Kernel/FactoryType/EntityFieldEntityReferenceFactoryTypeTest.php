@@ -46,7 +46,7 @@ class EntityFieldEntityReferenceFactoryTypeTest extends EntityKernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public static $modules = [
+  protected static $modules = [
     'node',
     'taxonomy',
     'file',

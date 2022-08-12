@@ -25,7 +25,7 @@ class UserFactoryTest extends LollipopKernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public static $modules = [
+  protected static $modules = [
     'user',
     'factory_lollipop_test',
   ];
@@ -43,6 +43,7 @@ class UserFactoryTest extends LollipopKernelTestBase {
 
     $role = Role::create([
       'id' => 'moderator',
+      'label' => 'moderator',
       'permissions' => ['administer comments'],
     ]);
     $role->save();

@@ -27,12 +27,13 @@ class UserFactoryTypeTest extends EntityKernelTestBase {
     parent::setUp();
     $this->userFactoryTypeResolver = new UserFactoryType();
     $this->userFactoryTypeResolver->setEntityTypeManager($this->container->get('entity_type.manager'));
+    $this->userFactoryTypeResolver->setPasswordGenerator($this->container->get('password_generator'));
   }
 
   /**
    * {@inheritdoc}
    */
-  public static $modules = [
+  protected static $modules = [
     'user',
   ];
 
@@ -82,7 +83,7 @@ class UserFactoryTypeTest extends EntityKernelTestBase {
   public function testCreateWithRoles(): void {
     $role1 = Role::create([
       'id' => 'test_role1',
-      'name' => $this->randomString(),
+      'label' => $this->randomString(),
     ]);
     $role1->save();
 

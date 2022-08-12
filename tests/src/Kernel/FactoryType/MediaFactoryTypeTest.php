@@ -52,7 +52,7 @@ class MediaFactoryTypeTest extends EntityKernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public static $modules = [
+  protected static $modules = [
     'media',
     'file',
     'image',

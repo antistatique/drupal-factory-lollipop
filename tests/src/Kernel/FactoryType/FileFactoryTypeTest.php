@@ -54,7 +54,7 @@ class FileFactoryTypeTest extends EntityKernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public static $modules = [
+  protected static $modules = [
     'file',
   ];
 

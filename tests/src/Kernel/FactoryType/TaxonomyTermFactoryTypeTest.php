@@ -35,7 +35,7 @@ class TaxonomyTermFactoryTypeTest extends EntityKernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public static $modules = [
+  protected static $modules = [
     'taxonomy',
   ];
 

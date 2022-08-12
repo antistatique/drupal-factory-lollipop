@@ -77,14 +77,16 @@ It may be useful for existing users to check out the [upgrade guide](UPGRADING.m
 
 ## Versions
 
-Factory Lollipop is available for both Drupal 8 and Drupal 9!
+Factory Lollipop is available for both Drupal 9 and Drupal 10!
 
 ### Which version should I use?
 
-|Drupal Core|Factory Lollipop|
-|:---------:|:--------------:|
-|8.8.x      |1.0.x           |
-|9.x        |1.0.x           |
+| Drupal Core | Factory Lollipop |
+|:-----------:|:----------------:|
+|     8.x     |      1.0.0       |
+|     9.0     |      1.0.0       |
+|     9.x     |      1.1.x       |
+|    10.x     |      1.1.x       |
 
 ## Roadmap
 
@@ -97,7 +99,7 @@ _Everything contained before is in draft form and subject to change. We do not g
 
 ## Dependencies
 
-The Drupal 8 and Drupal 9 version of Factory Lollipop requires nothing !
+The Drupal 9 version of Factory Lollipop requires nothing !
 Feel free to use it.
 
 Factory Lollipop requires PHP 7.3+ to works properly. We recommend updating to at least PHP 7.4 if possible, which is supported as of Drupal 8.8.3 (release date: March 7, 2018).

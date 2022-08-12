@@ -31,7 +31,7 @@ class VocabularyFactoryTypeTest extends EntityKernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public static $modules = [
+  protected static $modules = [
     'taxonomy',
   ];
 

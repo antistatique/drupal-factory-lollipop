@@ -15,7 +15,7 @@ class FixtureFactoryTest extends LollipopKernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public static $modules = [
+  protected static $modules = [
     'node',
     'taxonomy',
     'file',

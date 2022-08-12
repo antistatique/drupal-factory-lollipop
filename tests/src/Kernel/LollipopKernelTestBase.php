@@ -24,14 +24,14 @@ abstract class LollipopKernelTestBase extends EntityKernelTestBase {
    *
    * @var array
    */
-  public static $modules = [
+  protected static $modules = [
     'factory_lollipop',
   ];
 
   /**
    * {@inheritdoc}
    */
-  protected function setUp() {
+  protected function setUp(): void {
     parent::setUp();
     $this->factoryLollipop = $this->container->get('factory_lollipop.fixture_factory');
   }

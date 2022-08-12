@@ -24,7 +24,7 @@ class VocabularyFactoryTest extends LollipopKernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public static $modules = [
+  protected static $modules = [
     'taxonomy',
     'factory_lollipop_test',
   ];

@@ -21,7 +21,7 @@ class FixtureFactoryTest extends EntityKernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public static $modules = [
+  protected static $modules = [
     'factory_lollipop',
     'node',
     'taxonomy',
