@@ -6,6 +6,7 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\factory_lollipop\Traits\RandomGeneratorTrait;
 use Drupal\factory_lollipop\Traits\UserCreationTrait;
 use Drupal\user\UserInterface;
+use Drupal\Core\Password\PasswordGeneratorInterface;
 
 /**
  * Creates Drupal Users for use in tests.
@@ -22,6 +23,13 @@ class UserFactoryType implements FactoryTypeInterface {
   protected $entityTypeManager;
 
   /**
+   * Generating passwords.
+   *
+   * @var \Drupal\Core\Password\PasswordGeneratorInterface|null
+   */
+  protected $passwordGenerator;
+
+  /**
    * Sets the entity type manager.
    *
    * This is only called when the factory is instantiated.
@@ -31,6 +39,18 @@ class UserFactoryType implements FactoryTypeInterface {
    */
   public function setEntityTypeManager(EntityTypeManagerInterface $entity_type_manager): void {
     $this->entityTypeManager = $entity_type_manager;
+  }
+
+  /**
+   * Sets the password generator.
+   *
+   * This is only called when the factory is instantiated.
+   *
+   * @param \Drupal\Core\Password\PasswordGeneratorInterface $password_generator
+   *   The new password generator.
+   */
+  public function setPasswordGenerator(PasswordGeneratorInterface $password_generator): void {
+    $this->passwordGenerator = $password_generator;
   }
 
   /**
@@ -70,7 +90,7 @@ class UserFactoryType implements FactoryTypeInterface {
     $mail = $attributes['mail'] ?? $name . '@example.com';
     $roles = $attributes['roles'] ?? [];
     $status = $attributes['status'] ?? 1;
-    $pass = $attributes['pass'] ?? user_password();
+    $pass = $attributes['pass'] ?? $this->passwordGenerator->generate();
 
     // Prevent creation of already existing User.
     if ($uid) {

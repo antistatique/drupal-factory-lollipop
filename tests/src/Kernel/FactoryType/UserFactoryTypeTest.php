@@ -27,6 +27,7 @@ class UserFactoryTypeTest extends EntityKernelTestBase {
     parent::setUp();
     $this->userFactoryTypeResolver = new UserFactoryType();
     $this->userFactoryTypeResolver->setEntityTypeManager($this->container->get('entity_type.manager'));
+    $this->userFactoryTypeResolver->setPasswordGenerator($this->container->get('password_generator'));
   }
 
   /**

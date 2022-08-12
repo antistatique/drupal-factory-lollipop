@@ -3,4 +3,5 @@ description: 'Factory Lollipop is a comprehensive solution for using the factory
 package: 'Development'
 type: module
 core_version_requirement: ^9.1 || ^10
-
+dependencies:
+  - drupal:user
