@@ -6,7 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.1.0 - 2022-08-12]
+### Removed
+- remove satackey/action-docker-layer-caching on Github Actions
+
+## [1.1.0] - 2022-08-12
 ### Added
 - add support Drupal 9.4 & 9.5
 
@@ -21,5 +24,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - init module
 
 [Unreleased]: https://github.com/antistatique/drupal-factory-lollipop/compare/1.1.0...HEAD
-[0.1.0]: https://github.com/antistatique/drupal-factory-lollipop/compare/1.0.0...1.1.0
+[1.1.0]: https://github.com/antistatique/drupal-factory-lollipop/compare/1.0.0...1.1.0
 [1.0.0]: https://github.com/antistatique/drupal-factory-lollipop/releases/tags/1.0.0
