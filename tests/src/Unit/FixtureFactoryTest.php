@@ -88,7 +88,7 @@ class FixtureFactoryTest extends UnitTestCase {
         $chain_factory_type_resolver,
         $chain_factory_resolver,
       ])
-      ->setMethods(['getDefaultOptions', 'getType'])
+      ->onlyMethods(['getDefaultOptions', 'getType'])
       ->getMock();
 
     // Ensure ::getDefaultOptions will be called with foo argument.

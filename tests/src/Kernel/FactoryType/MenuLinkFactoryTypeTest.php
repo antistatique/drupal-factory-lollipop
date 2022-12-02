@@ -174,7 +174,7 @@ class MenuLinkFactoryTypeTest extends EntityKernelTestBase {
       $menu_link_plugin = $this->menuLinkManager->createInstance($links[$id]);
       $expected_parent = $links[$parent] ?? '';
 
-      $this->assertEqual($menu_link_plugin->getParent(), $expected_parent, sprintf('Menu link %s has parent of %s, expected %s.', $id, $menu_link_plugin->getParent(), $expected_parent));
+      $this->assertEquals($menu_link_plugin->getParent(), $expected_parent, sprintf('Menu link %s has parent of %s, expected %s.', $id, $menu_link_plugin->getParent(), $expected_parent));
     }
   }
 
