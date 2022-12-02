@@ -44,7 +44,7 @@ class UserFactoryTest extends LollipopKernelTestBase {
     $role = Role::create([
       'id' => 'moderator',
       'label' => 'moderator',
-      'permissions' => ['administer comments'],
+      'permissions' => ['access content'],
     ]);
     $role->save();
 
@@ -58,7 +58,7 @@ class UserFactoryTest extends LollipopKernelTestBase {
     self::assertInstanceOf(UserInterface::class, $user);
     self::assertSame('1', $user->id());
     self::assertEquals(['authenticated', 'moderator'], $user->getRoles());
-    self::assertTrue($user->hasPermission('administer comments'));
+    self::assertTrue($user->hasPermission('access content'));
 
     // Ensure the 2nd created user has the administrator custom role.
     /** @var \Drupal\user\UserInterface $user */
@@ -66,7 +66,7 @@ class UserFactoryTest extends LollipopKernelTestBase {
     self::assertInstanceOf(UserInterface::class, $user);
     self::assertSame('2', $user->id());
     self::assertEquals(['authenticated', 'administrator'], $user->getRoles());
-    self::assertFalse($user->hasPermission('administer comments'));
+    self::assertFalse($user->hasPermission('access content'));
 
     // Ensure the 3rd created user is just authenticated without permissions.
     /** @var \Drupal\user\UserInterface $user */
@@ -74,7 +74,7 @@ class UserFactoryTest extends LollipopKernelTestBase {
     self::assertInstanceOf(UserInterface::class, $user);
     self::assertSame('3', $user->id());
     self::assertEquals(['authenticated'], $user->getRoles());
-    self::assertFalse($user->hasPermission('administer comments'));
+    self::assertFalse($user->hasPermission('access content'));
 
     // Ensure Anonymous user has not permission.
     /** @var \Drupal\user\UserInterface $user */
@@ -82,7 +82,7 @@ class UserFactoryTest extends LollipopKernelTestBase {
     self::assertInstanceOf(UserInterface::class, $user);
     self::assertSame('0', $user->id());
     self::assertEquals(['anonymous'], $user->getRoles());
-    self::assertFalse($user->hasPermission('administer comments'));
+    self::assertFalse($user->hasPermission('access content'));
   }
 
 }

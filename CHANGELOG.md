@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - fix call to deprecated method setMethods()
 - fix call to deprecated method drupalPostForm()
 - fix calling responseContains with more than one argument is deprecated
+- fix adding non-existent permissions to a role is deprecated
 
 ### Changed
 - re-enable PHPUnit Symfony Deprecation notice
