@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - fix call to deprecated method assertEqual()
 - fix call to deprecated method setMethods()
 - fix call to deprecated method drupalPostForm()
+- fix calling responseContains with more than one argument is deprecated
 
 ## [1.1.0] - 2022-08-12
 ### Added

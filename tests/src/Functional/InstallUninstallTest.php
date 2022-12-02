@@ -48,7 +48,7 @@ class InstallUninstallTest extends ModuleTestBase {
     $this->submitForm($edit, 'Uninstall');
     // Confirm uninstall.
     $this->submitForm([], 'Uninstall');
-    $this->assertSession()->responseContains('The selected modules have been uninstalled.', 'Modules status has been updated.');
+    $this->assertSession()->responseContains('The selected modules have been uninstalled.');
 
     // Makes sure the module has been uninstalled.
     $this->assertModules(['factory_lollipop'], FALSE);
