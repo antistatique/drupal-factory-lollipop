@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - add official support of drupal 9.5 & 10.0
 
+### Fixed
+- fix deprecation of theme start for tests
+
 ## [1.1.0] - 2022-08-12
 ### Added
 - add support Drupal 9.4 & 9.5

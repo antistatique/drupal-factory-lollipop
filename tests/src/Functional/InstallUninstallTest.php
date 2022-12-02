@@ -15,7 +15,7 @@ class InstallUninstallTest extends ModuleTestBase {
   /**
    * {@inheritdoc}
    */
-  protected $defaultTheme = 'stark';
+  protected $defaultTheme = 'starterkit_theme';
 
   /**
    * Ensure Factory Lollipop can be installed.
