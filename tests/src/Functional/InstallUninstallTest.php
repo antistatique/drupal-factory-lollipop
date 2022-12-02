@@ -27,7 +27,8 @@ class InstallUninstallTest extends ModuleTestBase {
     // Attempt to install the factory_lollipop module.
     $edit = [];
     $edit['modules[factory_lollipop][enable]'] = 'factory_lollipop';
-    $this->drupalPostForm('admin/modules', $edit, 'Install');
+    $this->drupalGet('admin/modules');
+    $this->submitForm($edit, 'Install');
     $this->assertSession()->pageTextContains('Module Factory Lollipop has been enabled');
 
     // Makes sure the module has been installed.
@@ -43,8 +44,10 @@ class InstallUninstallTest extends ModuleTestBase {
 
     // Attempt to uninstall the factory_lollipop module.
     $edit['uninstall[factory_lollipop]'] = TRUE;
-    $this->drupalPostForm('admin/modules/uninstall', $edit, 'Uninstall');
-    $this->drupalPostForm(NULL, NULL, 'Uninstall');
+    $this->drupalGet('admin/modules/uninstall');
+    $this->submitForm($edit, 'Uninstall');
+    // Confirm uninstall.
+    $this->submitForm([], 'Uninstall');
     $this->assertSession()->responseContains('The selected modules have been uninstalled.', 'Modules status has been updated.');
 
     // Makes sure the module has been uninstalled.

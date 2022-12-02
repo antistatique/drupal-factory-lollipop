@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - fix call to deprecated constant FILE_STATUS_PERMANENT
 - fix call to deprecated method assertEqual()
 - fix call to deprecated method setMethods()
+- fix call to deprecated method drupalPostForm()
 
 ## [1.1.0] - 2022-08-12
 ### Added
