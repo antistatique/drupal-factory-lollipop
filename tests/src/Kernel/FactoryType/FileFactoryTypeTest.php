@@ -229,14 +229,6 @@ class FileFactoryTypeTest extends EntityKernelTestBase {
           'mimetype' => 'text/html',
         ],
       ],
-      '.phar' => [
-        'phar-1.phar',
-        [
-          'filename' => 'phar-1',
-          'uri' => 'public://phar-1.phar',
-          'mimetype' => 'application/octet-stream',
-        ],
-      ],
       '.php' => [
         'php-2.php',
         [
