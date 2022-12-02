@@ -135,7 +135,7 @@ class FileFactoryType implements FactoryTypeInterface {
 
     $file = $file_storage->create($values + [
       'uri' => $attributes['uri'],
-      'status' => $attributes['status'] ?? FileInterface::FILE_STATUS_PERMANENT,
+      'status' => $attributes['status'] ?? FileInterface::STATUS_PERMANENT,
     ]);
     $file->save();
     return $file;
