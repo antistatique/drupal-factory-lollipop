@@ -20,6 +20,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - fix call to deprecated method drupalPostForm()
 - fix calling responseContains with more than one argument is deprecated
 
+### Changed
+- re-enable PHPUnit Symfony Deprecation notice
+
 ## [1.1.0] - 2022-08-12
 ### Added
 - add support Drupal 9.4 & 9.5
