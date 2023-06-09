@@ -1,0 +1,16 @@
+services:
+
+## Factory Types
+  factory_lollipop.factory_type.paragraph_type:
+    class: Drupal\factory_lollipop_paragraphs\FactoryType\ParagraphTypeFactoryType
+    tags:
+      - { name: factory_lollipop.factory_type_resolver, priority: 245 }
+    calls:
+      - [setEntityTypeManager, ['@entity_type.manager']]
+
+  factory_lollipop.factory_type.paragraph:
+    class: Drupal\factory_lollipop_paragraphs\FactoryType\ParagraphFactoryType
+    tags:
+      - { name: factory_lollipop.factory_type_resolver, priority: 245 }
+    calls:
+      - [setEntityTypeManager, ['@entity_type.manager']]

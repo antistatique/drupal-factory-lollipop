@@ -1,0 +1,22 @@
+services:
+
+## Factories
+  factory_lollipop.factories.paragraph_type.accordion:
+    class: Drupal\factory_lollipop_paragraphs_test\Factories\ParagraphTypeAccordionFactory
+    tags:
+      - { name: factory_lollipop.factory_resolver, priority: 120 }
+
+  factory_lollipop.factories.paragraph.accordion:
+    class: Drupal\factory_lollipop_paragraphs_test\Factories\ParagraphAccordionFactory
+    tags:
+      - { name: factory_lollipop.factory_resolver, priority: 120 }
+
+  factory_lollipop.factories.paragraph.faq:
+    class: Drupal\factory_lollipop_paragraphs_test\Factories\ParagraphFaqFactory
+    tags:
+      - { name: factory_lollipop.factory_resolver, priority: 120 }
+
+  factory_lollipop.factories.paragraph.embed_news:
+    class: Drupal\factory_lollipop_paragraphs_test\Factories\ParagraphEmbedNewsFactory
+    tags:
+      - { name: factory_lollipop.factory_resolver, priority: 120 }
