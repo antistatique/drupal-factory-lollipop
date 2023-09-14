@@ -60,6 +60,8 @@ At present, Factory Lollipop has support for the following types of data in Drup
   * File
   * Media Type
   * Media
+  * Paragraphs Type
+  * Paragraphs
 
 You can easily add/override any FactoryType by using the FactoryType Resolver. See the [official documentation](https://www.drupal.org/docs/contributed-modules/factory-lollipop) about it.
 

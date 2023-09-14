@@ -1,0 +1,8 @@
+name: Factory Lollipop Test - Paragraphs
+type: module
+description: Contains various example of Factory Lollipop usage with Paragraphs.
+package: Testing
+core_version_requirement: ^9.3 || ^10
+
+dependencies:
+  - factory_lollipop:factory_lollipop_paragraphs
