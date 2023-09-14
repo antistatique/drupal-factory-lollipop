@@ -3,8 +3,8 @@
 namespace Drupal\factory_lollipop\FactoryType;
 
 use Drupal\Core\Entity\EntityTypeManagerInterface;
-use Drupal\taxonomy\VocabularyInterface;
 use Drupal\factory_lollipop\Traits\RandomGeneratorTrait;
+use Drupal\taxonomy\VocabularyInterface;
 
 /**
  * Creates Drupal Vocabulary for use in tests.

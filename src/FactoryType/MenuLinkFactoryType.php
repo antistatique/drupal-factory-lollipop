@@ -3,8 +3,8 @@
 namespace Drupal\factory_lollipop\FactoryType;
 
 use Drupal\Core\Entity\EntityTypeManagerInterface;
-use Drupal\menu_link_content\MenuLinkContentInterface;
 use Drupal\factory_lollipop\Traits\RandomGeneratorTrait;
+use Drupal\menu_link_content\MenuLinkContentInterface;
 
 /**
  * Creates Drupal Menu Link for use in tests.

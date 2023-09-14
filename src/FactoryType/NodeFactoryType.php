@@ -2,10 +2,10 @@
 
 namespace Drupal\factory_lollipop\FactoryType;
 
-use Drupal\Core\Language\LanguageInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
-use Drupal\node\NodeInterface;
+use Drupal\Core\Language\LanguageInterface;
 use Drupal\factory_lollipop\Traits\RandomGeneratorTrait;
+use Drupal\node\NodeInterface;
 
 /**
  * Creates Drupal Nodes for use in tests.

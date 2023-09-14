@@ -4,8 +4,8 @@ namespace Drupal\factory_lollipop\FactoryType;
 
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Language\LanguageInterface;
-use Drupal\taxonomy\TermInterface;
 use Drupal\factory_lollipop\Traits\RandomGeneratorTrait;
+use Drupal\taxonomy\TermInterface;
 
 /**
  * Creates Drupal Taxonomy Term for use in tests.

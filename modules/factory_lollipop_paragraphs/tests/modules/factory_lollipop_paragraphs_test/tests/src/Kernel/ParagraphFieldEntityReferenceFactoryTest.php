@@ -2,9 +2,9 @@
 
 namespace Drupal\Tests\factory_lollipop_paragraphs_test\Kernel;
 
-use Drupal\Tests\factory_lollipop\Kernel\LollipopKernelTestBase;
-use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\entity_test\Entity\EntityTest;
+use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\Tests\factory_lollipop\Kernel\LollipopKernelTestBase;
 
 /**
  * Example of Factory Lollipop usage for Paragraph with entity reference fields.

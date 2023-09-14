@@ -4,8 +4,8 @@ namespace Drupal\Tests\factory_lollipop\Unit\Resolver;
 
 use Drupal\factory_lollipop\FactoryType\FactoryTypeInterface;
 use Drupal\factory_lollipop\FixtureFactory;
-use Drupal\factory_lollipop\Resolver\ChainFactoryTypeResolver;
 use Drupal\factory_lollipop\Resolver\ChainFactoryResolver;
+use Drupal\factory_lollipop\Resolver\ChainFactoryTypeResolver;
 use Drupal\Tests\UnitTestCase;
 
 /**

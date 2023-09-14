@@ -2,8 +2,8 @@
 
 namespace Drupal\factory_lollipop_paragraphs\FactoryType;
 
-use Drupal\factory_lollipop\FactoryType\FactoryTypeInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\factory_lollipop\FactoryType\FactoryTypeInterface;
 use Drupal\factory_lollipop\Traits\RandomGeneratorTrait;
 use Drupal\paragraphs\Entity\ParagraphsType;
 

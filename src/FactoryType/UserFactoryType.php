@@ -3,10 +3,10 @@
 namespace Drupal\factory_lollipop\FactoryType;
 
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\Password\PasswordGeneratorInterface;
 use Drupal\factory_lollipop\Traits\RandomGeneratorTrait;
 use Drupal\factory_lollipop\Traits\UserCreationTrait;
 use Drupal\user\UserInterface;
-use Drupal\Core\Password\PasswordGeneratorInterface;
 
 /**
  * Creates Drupal Users for use in tests.
