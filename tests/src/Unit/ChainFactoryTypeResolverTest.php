@@ -2,9 +2,9 @@
 
 namespace Drupal\Tests\factory_lollipop\Unit\Resolver;
 
+use Drupal\Core\DependencyInjection\ContainerBuilder;
 use Drupal\factory_lollipop\FactoryType\FactoryTypeInterface;
 use Drupal\factory_lollipop\Resolver\ChainFactoryTypeResolver;
-use Drupal\Core\DependencyInjection\ContainerBuilder;
 use Drupal\Tests\UnitTestCase;
 
 /**

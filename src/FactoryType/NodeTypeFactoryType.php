@@ -3,8 +3,8 @@
 namespace Drupal\factory_lollipop\FactoryType;
 
 use Drupal\Core\Entity\EntityTypeManagerInterface;
-use Drupal\node\NodeTypeInterface;
 use Drupal\factory_lollipop\Traits\RandomGeneratorTrait;
+use Drupal\node\NodeTypeInterface;
 
 /**
  * Creates Drupal Node Type for use in tests.

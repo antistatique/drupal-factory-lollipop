@@ -5,8 +5,8 @@ namespace Drupal\Tests\factory_lollipop_test\Kernel;
 use Drupal\Core\Url;
 use Drupal\menu_link_content\Entity\MenuLinkContent;
 use Drupal\menu_link_content\MenuLinkContentInterface;
-use Drupal\Tests\factory_lollipop\Kernel\LollipopKernelTestBase;
 use Drupal\system\Entity\Menu;
+use Drupal\Tests\factory_lollipop\Kernel\LollipopKernelTestBase;
 
 /**
  * Example of Factory Lollipop usage for Menu Link.

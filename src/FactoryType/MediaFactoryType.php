@@ -4,8 +4,8 @@ namespace Drupal\factory_lollipop\FactoryType;
 
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Language\LanguageInterface;
-use Drupal\media\MediaInterface;
 use Drupal\factory_lollipop\Traits\RandomGeneratorTrait;
+use Drupal\media\MediaInterface;
 
 /**
  * Creates Drupal Medias for use in tests.

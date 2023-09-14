@@ -2,9 +2,9 @@
 
 namespace Drupal\Tests\factory_lollipop_test\Kernel;
 
+use Drupal\file\Entity\File as EntityFile;
 use Drupal\media\MediaInterface;
 use Drupal\media\Plugin\media\Source\File;
-use Drupal\file\Entity\File as EntityFile;
 use Drupal\Tests\factory_lollipop\Kernel\LollipopKernelTestBase;
 
 /**

@@ -2,11 +2,11 @@
 
 namespace Drupal\factory_lollipop\FactoryType;
 
-use Drupal\field\Entity\FieldConfig;
-use Drupal\field\FieldConfigInterface;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\factory_lollipop\Traits\EntityReferenceTestTrait;
 use Drupal\factory_lollipop\Traits\RandomGeneratorTrait;
-use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\field\Entity\FieldConfig;
+use Drupal\field\FieldConfigInterface;
 
 /**
  * Creates Drupal Entity Reference Fields for use in tests.

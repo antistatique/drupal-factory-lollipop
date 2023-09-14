@@ -2,11 +2,11 @@
 
 namespace Drupal\factory_lollipop\FactoryType;
 
-use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\File\FileSystemInterface;
-use Drupal\file\FileInterface;
 use Drupal\factory_lollipop\Traits\RandomGeneratorTrait;
+use Drupal\file\FileInterface;
 
 /**
  * Creates Drupal Files for use in tests.

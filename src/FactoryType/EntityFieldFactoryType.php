@@ -2,9 +2,9 @@
 
 namespace Drupal\factory_lollipop\FactoryType;
 
-use Drupal\field\FieldConfigInterface;
-use Drupal\factory_lollipop\Traits\RandomGeneratorTrait;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\factory_lollipop\Traits\RandomGeneratorTrait;
+use Drupal\field\FieldConfigInterface;
 
 /**
  * Creates Drupal Entity Fields for use in tests.
