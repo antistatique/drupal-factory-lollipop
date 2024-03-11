@@ -2,12 +2,12 @@
 
 namespace Drupal\Tests\factory_lollipop\Kernel\FactoryType;
 
-use Prophecy\PhpUnit\ProphecyTrait;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Config\ImmutableConfig;
 use Drupal\Core\File\FileSystemInterface;
 use Drupal\factory_lollipop\FactoryType\FileFactoryType;
 use Drupal\KernelTests\Core\Entity\EntityKernelTestBase;
+use Prophecy\PhpUnit\ProphecyTrait;
 
 /**
  * @coversDefaultClass \Drupal\factory_lollipop\FactoryType\FileFactoryType
