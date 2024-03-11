@@ -17,12 +17,18 @@
       "role": "Author & Maintainer"
     }
   ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ],
   "support": {
     "issues": "https://www.drupal.org/project/issues/factory_lollipop"
   },
   "license": "GPL-2.0-or-later",
   "require-dev": {
-    "drupal/coder": "^8.3.1"
+    "drupal/paragraphs": "^1"
   },
   "config": {
     "allow-plugins": {
