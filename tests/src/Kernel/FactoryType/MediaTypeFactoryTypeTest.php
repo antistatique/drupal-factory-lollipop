@@ -93,7 +93,7 @@ class MediaTypeFactoryTypeTest extends EntityKernelTestBase {
       $this->expectExceptionMessageMatches('#^The "foo" plugin does not exist\. Valid plugin IDs.+$#');
     }
     else {
-      $this->expectExceptionMessageRegExp('#^The "foo" plugin does not exist\. Valid plugin IDs.+$#');
+      $this->expectExceptionMessageMatches('#^The "foo" plugin does not exist\. Valid plugin IDs.+$#');
     }
     $this->mediaTypeFactoryTypeResolver->create((object) [
       'source' => 'foo',

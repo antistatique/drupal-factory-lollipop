@@ -2,6 +2,7 @@
 
 namespace Drupal\Tests\factory_lollipop\Unit\Resolver\FactoryType;
 
+use Prophecy\PhpUnit\ProphecyTrait;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Config\ImmutableConfig;
 use Drupal\Core\File\FileSystemInterface;
@@ -15,6 +16,7 @@ use Drupal\Tests\UnitTestCase;
  */
 class FileFactoryTypeTest extends UnitTestCase {
 
+  use ProphecyTrait;
   /**
    * The File Factory resolver.
    *

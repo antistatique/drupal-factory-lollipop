@@ -2,6 +2,7 @@
 
 namespace Drupal\Tests\factory_lollipop\Kernel\FactoryType;
 
+use Prophecy\PhpUnit\ProphecyTrait;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Config\ImmutableConfig;
 use Drupal\Core\File\FileSystemInterface;
@@ -15,6 +16,7 @@ use Drupal\KernelTests\Core\Entity\EntityKernelTestBase;
  */
 class FileFactoryTypeTest extends EntityKernelTestBase {
 
+  use ProphecyTrait;
   /**
    * The Node Factory resolver.
    *
@@ -70,7 +72,7 @@ class FileFactoryTypeTest extends EntityKernelTestBase {
       $this->expectExceptionMessageMatches('#^File ".+/core/tests/fixtures/foo" does not exist\.$#');
     }
     else {
-      $this->expectExceptionMessageRegExp('#^File ".+/core/tests/fixtures/foo" does not exist\.$#');
+      $this->expectExceptionMessageMatches('#^File ".+/core/tests/fixtures/foo" does not exist\.$#');
     }
     $this->fileFactoryTypeResolver->create((object) ['path' => $file_path]);
   }
