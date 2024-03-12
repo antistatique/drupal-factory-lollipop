@@ -21,12 +21,12 @@ class HelpTest extends BrowserTestBase {
    *
    * @var array
    */
-  protected static $modules = ['help_test', 'factory_lollipop'];
+  protected static $modules = ['help', 'help_test', 'factory_lollipop'];
 
   /**
    * {@inheritdoc}
    */
-  protected $defaultTheme = 'starterkit_theme';
+  protected $defaultTheme = 'stark';
 
   /**
    * The admin user.
@@ -41,12 +41,20 @@ class HelpTest extends BrowserTestBase {
   protected function setUp(): void {
     parent::setUp();
 
-    // Create users.
-    $this->adminUser = $this->drupalCreateUser([
+    $permissions = [
       'access administration pages',
-      'view the administration theme',
-      'administer permissions',
-    ]);
+    ];
+
+    // Since Drupal 10.2 accessing help page require a new permission.
+    if (version_compare(\Drupal::VERSION, '10.2', '>=')) {
+      $permissions = [
+        'access administration pages',
+        'access help pages',
+      ];
+    }
+
+    // Create users.
+    $this->adminUser = $this->drupalCreateUser($permissions);
     $this->drupalLogin($this->adminUser);
   }
 

@@ -9,6 +9,7 @@ ENV BASE_IMAGE_TAG=${BASE_IMAGE_TAG}
 
 # Install drupal/paragraphs as required by entity_to_text_paragraphs
 RUN COMPOSER_MEMORY_LIMIT=-1 composer require "drupal/paragraphs:^1.14"
+RUN COMPOSER_MEMORY_LIMIT=-1 composer require --dev "drupal/entity_browser"
 
 # Register the Drupal and DrupalPractice Standard with PHPCS.
 RUN ./vendor/bin/phpcs --config-set installed_paths \
