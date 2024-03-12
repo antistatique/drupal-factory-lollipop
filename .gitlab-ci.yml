@@ -47,13 +47,3 @@ phpcs:
   allow_failure: false
 phpstan:
   allow_failure: false
-
-#
-# Require spellcheck to pass, but ignore changelog.
-#
-cspell:
-  allow_failure: false
-  variables:
-    # Ignore commonly ignored paths by default.
-    # @see https://www.drupal.org/project/gitlab_templates/issues/3426392
-    _CSPELL_IGNORE_PATHS='"composer.json","composer.lock","CONTRIBUTING.md", "README.md", "Dockerfile", "phpmd.xml", "scripts/hooks/post-commit"'
