@@ -46,6 +46,8 @@ class FileFactoryTypeTest extends EntityKernelTestBase {
    * Revert files and permissions changes.
    */
   public function tearDown(): void {
+    parent::tearDown();
+
     // Delete unreadable tests file.
     @chmod('temporary://test-unreadable.txt', 0755);
     @unlink('temporary://test-unreadable.txt');

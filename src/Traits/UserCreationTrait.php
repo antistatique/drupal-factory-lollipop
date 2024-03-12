@@ -292,7 +292,7 @@ trait UserCreationTrait {
         $this->grantPermissions($role, $permissions);
         $assigned_permissions = Role::load($role->id())->getPermissions();
         $missing_permissions = array_diff($permissions, $assigned_permissions);
-        $this->assertEmpty($missing_permissions);
+        Assert::assertEmpty($missing_permissions);
       }
       return $role->id();
     }
