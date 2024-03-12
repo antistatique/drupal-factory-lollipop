@@ -55,9 +55,7 @@ class FixtureFactoryTest extends UnitTestCase {
    * @see \Drupal\Tests\factory_lollipop_test\Kernel\VocabularyFactoryTest
    */
   public function testCreate(): void {
-    $factory_type_foo = $this->getMockBuilder(FactoryTypeInterface::class)
-      ->disableOriginalConstructor()
-      ->getMock();
+    $factory_type_foo = $this->createMock(FactoryTypeInterface::class);
 
     $factory_type_foo
       ->expects(self::once())
@@ -70,18 +68,14 @@ class FixtureFactoryTest extends UnitTestCase {
       ->method('create')
       ->with(self::equalTo((object) ['default' => 'lorem', 'arg1' => 'bar']));
 
-    $chain_factory_type_resolver = $this->getMockBuilder(ChainFactoryTypeResolver::class)
-      ->disableOriginalConstructor()
-      ->getMock();
+    $chain_factory_type_resolver = $this->createMock(ChainFactoryTypeResolver::class);
 
     $chain_factory_type_resolver
       ->expects(self::once())
       ->method('getResolvers')
       ->willReturn([$factory_type_foo]);
 
-    $chain_factory_resolver = $this->getMockBuilder(ChainFactoryResolver::class)
-      ->disableOriginalConstructor()
-      ->getMock();
+    $chain_factory_resolver = $this->createMock(ChainFactoryResolver::class);
 
     $factory_Lollipop = $this->getMockBuilder(FixtureFactory::class)
       ->setConstructorArgs([

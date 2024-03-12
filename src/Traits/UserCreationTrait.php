@@ -1,5 +1,4 @@
 <?php
-// phpcs:ignoreFile
 
 namespace Drupal\factory_lollipop\Traits;
 
@@ -12,10 +11,10 @@ use Drupal\KernelTests\KernelTestBase;
 use Drupal\user\Entity\Role;
 use Drupal\user\Entity\User;
 use Drupal\user\RoleInterface;
+use PHPUnit\Framework\Assert;
 
 /**
- * Provides methods to create additional test users and switch the currently
- * logged in one.
+ * Provides test methods for user creation and authentication.
  *
  * This trait is meant to be used only by test classes.
  *
@@ -199,7 +198,10 @@ trait UserCreationTrait {
     $account->save();
 
     $valid_user = $account->id() !== NULL;
-    $this->assertTrue($valid_user, new FormattableMarkup('User created with name %name and pass %pass', ['%name' => $edit['name'], '%pass' => $edit['pass']]), 'User login');
+    Assert::assertTrue($valid_user, new FormattableMarkup('User created with name %name and pass %pass', [
+      '%name' => $edit['name'],
+      '%pass' => $edit['pass'],
+    ]));
     if (!$valid_user) {
       return FALSE;
     }
@@ -279,10 +281,10 @@ trait UserCreationTrait {
     }
     $result = $role->save();
 
-    $this->assertIdentical($result, SAVED_NEW, new FormattableMarkup('Created role ID @rid with name @name.', [
+    Assert::assertSame(SAVED_NEW, $result, new FormattableMarkup('Created role ID @rid with name @name.', [
       '@name' => var_export($role->label(), TRUE),
       '@rid' => var_export($role->id(), TRUE),
-    ]), 'Role');
+    ]));
 
     if ($result === SAVED_NEW) {
       // Grant the specified permissions to the role, if any.
@@ -290,12 +292,7 @@ trait UserCreationTrait {
         $this->grantPermissions($role, $permissions);
         $assigned_permissions = Role::load($role->id())->getPermissions();
         $missing_permissions = array_diff($permissions, $assigned_permissions);
-        if (!$missing_permissions) {
-          $this->pass(new FormattableMarkup('Created permissions: @perms', ['@perms' => implode(', ', $permissions)]), 'Role');
-        }
-        else {
-          $this->fail(new FormattableMarkup('Failed to create permissions: @perms', ['@perms' => implode(', ', $missing_permissions)]), 'Role');
-        }
+        Assert::assertEmpty($missing_permissions);
       }
       return $role->id();
     }
@@ -318,7 +315,7 @@ trait UserCreationTrait {
     $valid = TRUE;
     foreach ($permissions as $permission) {
       if (!in_array($permission, $available)) {
-        $this->fail(new FormattableMarkup('Invalid permission %permission.', ['%permission' => $permission]), 'Role');
+        Assert::fail(new FormattableMarkup('Invalid permission %permission.', ['%permission' => $permission]));
         $valid = FALSE;
       }
     }

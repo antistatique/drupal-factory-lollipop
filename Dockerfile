@@ -1,11 +1,12 @@
-ARG BASE_IMAGE_TAG=9.3
+ARG BASE_IMAGE_TAG=10.1
 FROM wengerk/drupal-for-contrib:${BASE_IMAGE_TAG}
 
 ARG BASE_IMAGE_TAG
 ENV BASE_IMAGE_TAG=${BASE_IMAGE_TAG}
 
-# Disable deprecation notice.
-# ENV SYMFONY_DEPRECATIONS_HELPER=disabled
+# Disable deprecation notice since PHPUnit 10 with Drupal 10.2 and upper.
+# @see https://www.drupal.org/project/drupal/issues/3401236#comment-15330177
+ENV SYMFONY_DEPRECATIONS_HELPER=weak
 
 # Install drupal/paragraphs as required by entity_to_text_paragraphs
 RUN COMPOSER_MEMORY_LIMIT=-1 composer require "drupal/paragraphs:^1.14"

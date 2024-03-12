@@ -7,6 +7,7 @@ use Drupal\Core\Config\ImmutableConfig;
 use Drupal\Core\File\FileSystemInterface;
 use Drupal\factory_lollipop\FactoryType\FileFactoryType;
 use Drupal\Tests\UnitTestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
 
 /**
  * @coversDefaultClass \Drupal\factory_lollipop\FactoryType\FileFactoryType
@@ -15,6 +16,7 @@ use Drupal\Tests\UnitTestCase;
  */
 class FileFactoryTypeTest extends UnitTestCase {
 
+  use ProphecyTrait;
   /**
    * The File Factory resolver.
    *

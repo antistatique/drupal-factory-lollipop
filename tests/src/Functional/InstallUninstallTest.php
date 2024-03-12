@@ -29,7 +29,14 @@ class InstallUninstallTest extends ModuleTestBase {
     $edit['modules[factory_lollipop][enable]'] = 'factory_lollipop';
     $this->drupalGet('admin/modules');
     $this->submitForm($edit, 'Install');
-    $this->assertSession()->pageTextContains('Module Factory Lollipop has been enabled');
+
+    // Since Drupal 10.3 the installation message has been changed.
+    if (version_compare(\Drupal::VERSION, '10.3', '>=')) {
+      $this->assertSession()->pageTextContains('Module Factory Lollipop has been installed.');
+    }
+    else {
+      $this->assertSession()->pageTextContains('Module Factory Lollipop has been enabled');
+    }
 
     // Makes sure the module has been installed.
     $this->assertModules(['factory_lollipop'], TRUE);

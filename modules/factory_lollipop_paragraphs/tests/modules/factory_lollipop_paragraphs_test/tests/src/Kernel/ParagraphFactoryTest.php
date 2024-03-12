@@ -11,6 +11,7 @@ use Drupal\Tests\factory_lollipop\Kernel\LollipopKernelTestBase;
  * @group factory_lollipop
  * @group factory_lollipop_paragraphs
  * @group factory_lollipop_example
+ * @requires module paragraphs
  */
 class ParagraphFactoryTest extends LollipopKernelTestBase {
 
