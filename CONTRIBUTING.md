@@ -40,7 +40,7 @@ Once run, you will be able to access to your fresh installed Drupal on `localhos
     docker compose up -d drupal
     docker compose exec -u www-data drupal drush site-install standard --db-url="mysql://drupal:drupal@db/drupal" -y
 
-    # You may be interesed by reseting the admin password of your Docker.
+    # You may be interested in resetting the admin password of your Docker.
     docker compose exec drupal drush user:password admin admin
 
     # Enable the module to use it.

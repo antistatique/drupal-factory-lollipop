@@ -62,3 +62,11 @@ nascetur
 cursus
 tempor
 vestibulum
+cleancode
+codesize
+Cyclomatic
+libbz
+rulesets
+Unexisting
+unusedcode
+unvalidated
