@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - add official support of drupal 10.3
+- add official support of drupal 11.0
 
 ### Removed
 - remove legacy version annotation on docker-compose.yml

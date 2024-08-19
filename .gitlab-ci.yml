@@ -40,7 +40,7 @@ variables:
   # The current branch of the module requires PHP >=8.1 minimum.
   CORE_PREVIOUS_PHP_MIN: '8.1'
   # Opt in to testing $CORE_MAJOR_DEVELOPMENT (currently Drupal 11).
-  # OPT_IN_TEST_NEXT_MAJOR: '1'
+  OPT_IN_TEST_NEXT_MAJOR: '1'
 
 # This module wants to strictly comply with Drupal's coding standards.
 phpcs:
