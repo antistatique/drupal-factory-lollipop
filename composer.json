@@ -23,6 +23,7 @@
       "url": "https://packages.drupal.org/8"
     }
   ],
+  "minimum-stability": "dev",
   "support": {
     "issues": "https://www.drupal.org/project/issues/factory_lollipop"
   },
