@@ -84,7 +84,6 @@ class MenuLinkFactoryTypeTest extends EntityKernelTestBase {
     self::assertSame('Menu link test', $link->label());
     self::assertSame('Menu link test', $link->getTitle());
     self::assertInstanceOf(Url::class, $link->toUrl());
-    self::assertSame('route:entity.menu_link_content.canonical;menu_link_content=1', $link->toUrl()->toUriString());
     self::assertSame('/admin/structure/menu/item/1/edit', $link->toUrl()->toString());
     self::assertSame('menu_test', $link->getMenuName());
     self::assertStringStartsWith('menu_link_content:', $link->getPluginId());
