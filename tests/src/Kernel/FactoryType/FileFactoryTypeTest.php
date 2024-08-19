@@ -199,7 +199,7 @@ class FileFactoryTypeTest extends EntityKernelTestBase {
    * @return array
    *   Data provided.
    */
-  public function providerFileValues(): array {
+  public static function providerFileValues(): array {
     return [
       '.txt' => [
         'html-1.txt',

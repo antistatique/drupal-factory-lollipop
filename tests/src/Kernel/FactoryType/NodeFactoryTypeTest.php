@@ -88,7 +88,7 @@ class NodeFactoryTypeTest extends EntityKernelTestBase {
    * @return array
    *   Data provided.
    */
-  public function providerNodeValues(): array {
+  public static function providerNodeValues(): array {
     return [
       'published node' => [
         [

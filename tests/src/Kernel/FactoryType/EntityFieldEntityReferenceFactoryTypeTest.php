@@ -248,7 +248,7 @@ class EntityFieldEntityReferenceFactoryTypeTest extends EntityKernelTestBase {
    * @return array
    *   Data provided.
    */
-  public function providerTaxonomyFieldValues(): array {
+  public static function providerTaxonomyFieldValues(): array {
     return [
       'Test content entity reference' => [
         [
@@ -342,7 +342,7 @@ class EntityFieldEntityReferenceFactoryTypeTest extends EntityKernelTestBase {
    * @return array
    *   Data provided.
    */
-  public function providerNodeFieldValues(): array {
+  public static function providerNodeFieldValues(): array {
     return [
       'Test content entity reference' => [[
         'entity_type' => 'node',

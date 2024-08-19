@@ -248,7 +248,7 @@ class EntityFieldFactoryTypeTest extends EntityKernelTestBase {
    * @return array
    *   Data provided.
    */
-  public function providerTaxonomyFieldValues(): array {
+  public static function providerTaxonomyFieldValues(): array {
     return [
       'text field' => [
         [
@@ -339,7 +339,7 @@ class EntityFieldFactoryTypeTest extends EntityKernelTestBase {
    * @return array
    *   Data provided.
    */
-  public function providerNodeFieldValues(): array {
+  public static function providerNodeFieldValues(): array {
     return [
       'text field' => [
         [

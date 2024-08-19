@@ -112,7 +112,7 @@ class TaxonomyTermFactoryTypeTest extends EntityKernelTestBase {
    * @return array
    *   Data provided.
    */
-  public function providerValues(): array {
+  public static function providerValues(): array {
     return [
       'published taxonomy term' => [
         [

@@ -90,7 +90,7 @@ class MediaFactoryTypeTest extends EntityKernelTestBase {
    * @return array
    *   Data provided.
    */
-  public function providerMediaValues(): array {
+  public static function providerMediaValues(): array {
     return [
       'published media file' => [
         [
