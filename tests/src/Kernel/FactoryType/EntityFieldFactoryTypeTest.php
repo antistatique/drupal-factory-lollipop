@@ -250,7 +250,7 @@ class EntityFieldFactoryTypeTest extends EntityKernelTestBase {
    */
   public static function providerTaxonomyFieldValues(): array {
     return [
-      'text field' => [
+      'Taxonomy text field' => [
         [
           'entity_type' => 'taxonomy_term',
           'name' => 'field_foo',
@@ -258,7 +258,7 @@ class EntityFieldFactoryTypeTest extends EntityKernelTestBase {
           'type' => 'text',
         ],
       ],
-      'boolean field' => [
+      'Taxonomy boolean field' => [
         [
           'entity_type' => 'taxonomy_term',
           'name' => 'field_foo',
@@ -266,7 +266,7 @@ class EntityFieldFactoryTypeTest extends EntityKernelTestBase {
           'type' => 'boolean',
         ],
       ],
-      'string field' => [
+      'Taxonomy string field' => [
         [
           'entity_type' => 'taxonomy_term',
           'name' => 'field_foo',
@@ -274,7 +274,7 @@ class EntityFieldFactoryTypeTest extends EntityKernelTestBase {
           'type' => 'string',
         ],
       ],
-      'string long field' => [
+      'Taxonomy string long field' => [
         [
           'entity_type' => 'taxonomy_term',
           'name' => 'field_foo',
@@ -282,7 +282,7 @@ class EntityFieldFactoryTypeTest extends EntityKernelTestBase {
           'type' => 'string_long',
         ],
       ],
-      'integer field' => [
+      'Taxonomy integer field' => [
         [
           'entity_type' => 'taxonomy_term',
           'name' => 'field_foo',
@@ -290,7 +290,7 @@ class EntityFieldFactoryTypeTest extends EntityKernelTestBase {
           'type' => 'integer',
         ],
       ],
-      'float field' => [
+      'Taxonomy float field' => [
         [
           'entity_type' => 'taxonomy_term',
           'name' => 'field_foo',
@@ -298,7 +298,7 @@ class EntityFieldFactoryTypeTest extends EntityKernelTestBase {
           'type' => 'float',
         ],
       ],
-      'decimal field' => [
+      'Taxonomy decimal field' => [
         [
           'entity_type' => 'taxonomy_term',
           'name' => 'field_foo',
@@ -306,7 +306,7 @@ class EntityFieldFactoryTypeTest extends EntityKernelTestBase {
           'type' => 'decimal',
         ],
       ],
-      'email field' => [
+      'Taxonomy email field' => [
         [
           'entity_type' => 'taxonomy_term',
           'name' => 'field_foo',
@@ -314,7 +314,7 @@ class EntityFieldFactoryTypeTest extends EntityKernelTestBase {
           'type' => 'email',
         ],
       ],
-      'datetime field' => [
+      'Taxonomy datetime field' => [
         [
           'entity_type' => 'taxonomy_term',
           'name' => 'field_foo',
@@ -322,7 +322,7 @@ class EntityFieldFactoryTypeTest extends EntityKernelTestBase {
           'type' => 'datetime',
         ],
       ],
-      'daterange field' => [
+      'Taxonomy daterange field' => [
         [
           'entity_type' => 'taxonomy_term',
           'name' => 'field_foo',
