@@ -89,7 +89,7 @@ Factory Lollipop is available for both Drupal 9, Drupal 10 & Drupal 11 (dev) !
 |     9.0     |      1.0.0       |
 |     9.x     |      1.1.x       |
 |    10.x     |      1.2.x       |
-|  11.x-dev   |      1.2.x       |
+|    11.x     |      1.2.x       |
 
 ## Roadmap
 
