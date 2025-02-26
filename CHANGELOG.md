@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - add official stable support of drupal 10.4
 - add official stable support of drupal 11.1
 
+### Fixed
+- fix wrong @covers in order to calm-down phpstan
+
 ## [1.2.2] - 2024-08-20
 ### Fixed
 - fix obsolete docker-compose command in CIs

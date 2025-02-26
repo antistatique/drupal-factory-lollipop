@@ -70,7 +70,7 @@ class ParagraphFactoryTest extends LollipopKernelTestBase {
    * @covers \Drupal\factory_lollipop\FixtureFactory::define
    * @covers \Drupal\factory_lollipop\FixtureFactory::association
    * @covers \Drupal\factory_lollipop\FixtureFactory::create
-   * @covers \Drupal\factory_lollipop\FactoryType\ParagraphFactoryType::create
+   * @covers \Drupal\factory_lollipop_paragraphs\FactoryType\ParagraphFactoryType::create
    */
   public function testDefineOverride() {
     $this->factoryLollipop->loadDefinitions(['paragraph_accordion']);
