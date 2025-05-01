@@ -79,7 +79,7 @@ It may be useful for existing users to check out the [upgrade guide](UPGRADING.m
 
 ## Versions
 
-Factory Lollipop is available for both Drupal 9, Drupal 10 & Drupal 11 (dev) !
+Factory Lollipop is available for both Drupal 9, Drupal 10 & Drupal 11 !
 
 ### Which version should I use?
 

@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - fix wrong @covers in order to calm-down phpstan
 
+### Removed
+- drop support of Drupal 9.x
+
 ## [1.2.2] - 2024-08-20
 ### Fixed
 - fix obsolete docker-compose command in CIs
