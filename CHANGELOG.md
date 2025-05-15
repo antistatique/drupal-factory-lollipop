@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.2.3] - 2025-05-15
 ### Added
 - add official stable support of drupal 10.4
 - add official stable support of drupal 11.1
@@ -74,7 +76,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - init module
 
-[Unreleased]: https://github.com/antistatique/drupal-factory-lollipop/compare/1.2.2...HEAD
+[Unreleased]: https://github.com/antistatique/drupal-factory-lollipop/compare/1.2.3...HEAD
+[1.2.3]: https://github.com/antistatique/drupal-factory-lollipop/compare/1.2.2...1.2.3
 [1.2.2]: https://github.com/antistatique/drupal-factory-lollipop/compare/1.2.1...1.2.2
 [1.2.1]: https://github.com/antistatique/drupal-factory-lollipop/compare/1.2.0...1.2.1
 [1.2.0]: https://github.com/antistatique/drupal-factory-lollipop/compare/1.1.0...1.2.0
