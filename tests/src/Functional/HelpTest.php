@@ -43,15 +43,8 @@ class HelpTest extends BrowserTestBase {
 
     $permissions = [
       'access administration pages',
+      'access help pages',
     ];
-
-    // Since Drupal 10.2 accessing help page require a new permission.
-    if (version_compare(\Drupal::VERSION, '10.2', '>=')) {
-      $permissions = [
-        'access administration pages',
-        'access help pages',
-      ];
-    }
 
     // Create users.
     $this->adminUser = $this->drupalCreateUser($permissions);
