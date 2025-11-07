@@ -22,7 +22,7 @@ class NodeFieldFactoryTest extends LollipopKernelTestBase {
   ];
 
   /**
-   * Ensure defined Node-Field associated to Node can be created with fields..
+   * Ensure defined Node-Field associated to Node can be created with fields.
    *
    * @covers \Drupal\factory_lollipop\FixtureFactory::loadDefinitions
    * @covers \Drupal\factory_lollipop\FixtureFactory::define
