@@ -6,7 +6,7 @@ ENV BASE_IMAGE_TAG=${BASE_IMAGE_TAG}
 
 # Disable deprecation notice since PHPUnit 10 with Drupal 10.2 and upper.
 # @see https://www.drupal.org/project/drupal/issues/3401236#comment-15330177
-ENV SYMFONY_DEPRECATIONS_HELPER=weak
+ENV SYMFONY_DEPRECATIONS_HELPER=disabled
 
 # Install drupal/paragraphs as required by entity_to_text_paragraphs
 RUN COMPOSER_MEMORY_LIMIT=-1 composer config minimum-stability dev
