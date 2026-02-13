@@ -39,7 +39,7 @@ variables:
   # Opt in to testing $CORE_PREVIOUS_MAJOR (Drupal 10.4.x).
   OPT_IN_TEST_PREVIOUS_MAJOR: '1'
   # Opt in to testing $CORE_MAJOR_DEVELOPMENT (Drupal 12).
-  OPT_IN_TEST_NEXT_MAJOR: '1'
+  OPT_IN_TEST_NEXT_MAJOR: '0'
 
 # This module wants to strictly comply with Drupal's coding standards.
 phpcs:
