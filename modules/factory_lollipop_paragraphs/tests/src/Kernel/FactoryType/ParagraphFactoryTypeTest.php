@@ -28,7 +28,6 @@ class ParagraphFactoryTypeTest extends EntityKernelTestBase {
     parent::setUp();
 
     $this->installEntitySchema('paragraph');
-    \Drupal::moduleHandler()->loadInclude('paragraphs', 'install');
 
     $this->paragraphFactoryTypeResolver = new ParagraphFactoryType();
     $this->paragraphFactoryTypeResolver->setEntityTypeManager($this->container->get('entity_type.manager'));

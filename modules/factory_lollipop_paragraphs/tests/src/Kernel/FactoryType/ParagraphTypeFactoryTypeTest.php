@@ -35,6 +35,7 @@ class ParagraphTypeFactoryTypeTest extends EntityKernelTestBase {
    */
   protected static $modules = [
     'paragraphs',
+    'entity_reference_revisions',
     'file',
   ];
 
