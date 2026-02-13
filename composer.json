@@ -28,8 +28,9 @@
   },
   "license": "GPL-2.0-or-later",
   "require-dev": {
-    "drupal/paragraphs": "^1",
-    "drupal/coder": "^8.3.1"
+    "drupal/paragraphs": "dev-1.x",
+    "drupal/coder": "^8.3.1",
+    "drupal/pathauto": "dev-1.x"
   },
   "config": {
     "allow-plugins": {

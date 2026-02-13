@@ -1,4 +1,4 @@
-ARG BASE_IMAGE_TAG=11.2
+ARG BASE_IMAGE_TAG=11.3
 FROM wengerk/drupal-for-contrib:${BASE_IMAGE_TAG}
 
 ARG BASE_IMAGE_TAG
@@ -10,10 +10,10 @@ ENV SYMFONY_DEPRECATIONS_HELPER=disabled
 
 # Install drupal/paragraphs as required by entity_to_text_paragraphs
 RUN COMPOSER_MEMORY_LIMIT=-1 composer config minimum-stability dev
-RUN COMPOSER_MEMORY_LIMIT=-1 composer require "drupal/paragraphs:^1.14"
+RUN COMPOSER_MEMORY_LIMIT=-1 composer require "drupal/paragraphs:dev-1.x"
 RUN COMPOSER_MEMORY_LIMIT=-1 composer require --dev "drupal/entity_browser"
 RUN COMPOSER_MEMORY_LIMIT=-1 composer require --dev "drupal/feeds"
-RUN COMPOSER_MEMORY_LIMIT=-1 composer require --dev "drupal/pathauto"
+RUN COMPOSER_MEMORY_LIMIT=-1 composer require --dev "drupal/pathauto:dev-1.x"
 
 # Register the Drupal and DrupalPractice Standard with PHPCS.
 RUN ./vendor/bin/phpcs --config-set installed_paths \
