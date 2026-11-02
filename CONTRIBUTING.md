@@ -98,7 +98,7 @@ https://github.com/phpmd/phpmd
 Detect overcomplicated expressions & Unused parameters, methods, properties.
 
   ```
-  $ docker compose exec drupal phpmd ./web/modules/contrib/factory_lollipop/ text ./phpmd.xml \
+  $ docker compose exec drupal phpmd analyze ./web/modules/contrib/factory_lollipop/ --ruleset ./phpmd.xml \
   --suffixes php,module,inc,install,test,profile,theme,css,info,txt --exclude *Test.php,*vendor/*
   ```
 
