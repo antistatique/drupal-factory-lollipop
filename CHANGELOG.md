@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - fix(ci): use the PHPMD 3 `analyze` command
 - build: allow the symfony/runtime composer plugin required by Drupal 11.4
+- ci: rename the ci.yml workflow to test.yml so GitHub registers it again
 
 ## [1.2.5] - 2026-02-13
 ### Added
