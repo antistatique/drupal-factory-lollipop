@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - fix(ci): use the PHPMD 3 `analyze` command
+- build: allow the symfony/runtime composer plugin required by Drupal 11.4
 
 ## [1.2.5] - 2026-02-13
 ### Added
