@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - feat: add logo.png for project browser
 - ci: allow manually triggering the CI workflow
+- feat: declare Drupal 12 compatibility in `core_version_requirement`
+
+### Changed
+- ci: run Upgrade Status on Drupal 11.3 to report Drupal 12 readiness
 
 ### Fixed
 - fix(ci): use the PHPMD 3 `analyze` command
