@@ -28,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ci: rename the ci.yml workflow to test.yml so GitHub registers it again
 - fix: remove deprecated ConfigEntityInterface::trustData() call
 - fix: replace the obsolete docker-compose command by docker compose
+- fix(phpcs): remove the stray `>` after the exclude patterns
 
 ## [1.2.5] - 2026-02-13
 ### Added
