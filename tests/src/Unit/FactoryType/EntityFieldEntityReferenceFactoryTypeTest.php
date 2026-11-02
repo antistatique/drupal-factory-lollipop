@@ -4,12 +4,19 @@ namespace Drupal\Tests\factory_lollipop\Unit\Resolver\FactoryType;
 
 use Drupal\factory_lollipop\FactoryType\EntityFieldEntityReferenceFactoryType;
 use Drupal\Tests\UnitTestCase;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversMethod;
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * @coversDefaultClass \Drupal\factory_lollipop\FactoryType\EntityFieldEntityReferenceFactoryType
  *
  * @group factory_lollipop
  */
+#[CoversClass(\Drupal\factory_lollipop\FactoryType\EntityFieldEntityReferenceFactoryType::class)]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\EntityFieldEntityReferenceFactoryType::class, 'shouldApply')]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\EntityFieldEntityReferenceFactoryType::class, 'create')]
+#[Group('factory_lollipop')]
 class EntityFieldEntityReferenceFactoryTypeTest extends UnitTestCase {
 
   /**

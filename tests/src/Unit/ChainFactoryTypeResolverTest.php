@@ -6,12 +6,19 @@ use Drupal\Core\DependencyInjection\ContainerBuilder;
 use Drupal\factory_lollipop\FactoryType\FactoryTypeInterface;
 use Drupal\factory_lollipop\Resolver\ChainFactoryTypeResolver;
 use Drupal\Tests\UnitTestCase;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversMethod;
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * @coversDefaultClass \Drupal\factory_lollipop\Resolver\ChainFactoryTypeResolver
  *
  * @group factory_lollipop
  */
+#[CoversClass(\Drupal\factory_lollipop\Resolver\ChainFactoryTypeResolver::class)]
+#[CoversMethod(\Drupal\factory_lollipop\Resolver\ChainFactoryTypeResolver::class, 'addResolver')]
+#[CoversMethod(\Drupal\factory_lollipop\Resolver\ChainFactoryTypeResolver::class, 'getResolvers')]
+#[Group('factory_lollipop')]
 class ChainFactoryTypeResolverTest extends UnitTestCase {
 
   /**

@@ -3,6 +3,8 @@
 namespace Drupal\Tests\factory_lollipop\Functional;
 
 use Drupal\Tests\BrowserTestBase;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * Verify help display and user access to help based on permissions.
@@ -10,6 +12,9 @@ use Drupal\Tests\BrowserTestBase;
  * @group factory_lollipop
  * @group factory_lollipop_functional
  */
+#[Group('factory_lollipop')]
+#[Group('factory_lollipop_functional')]
+#[RunTestsInSeparateProcesses]
 class HelpTest extends BrowserTestBase {
 
   /**

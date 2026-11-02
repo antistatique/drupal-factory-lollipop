@@ -6,12 +6,21 @@ use Drupal\Core\Language\LanguageInterface;
 use Drupal\factory_lollipop\FactoryType\NodeFactoryType;
 use Drupal\KernelTests\Core\Entity\EntityKernelTestBase;
 use Drupal\node\Entity\NodeType;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversMethod;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * @coversDefaultClass \Drupal\factory_lollipop\FactoryType\NodeFactoryType
  *
  * @group factory_lollipop
  */
+#[CoversClass(\Drupal\factory_lollipop\FactoryType\NodeFactoryType::class)]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\NodeFactoryType::class, 'create')]
+#[Group('factory_lollipop')]
+#[RunTestsInSeparateProcesses]
 class NodeFactoryTypeTest extends EntityKernelTestBase {
 
   /**
@@ -42,6 +51,7 @@ class NodeFactoryTypeTest extends EntityKernelTestBase {
    *
    * @dataProvider providerNodeValues
    */
+  #[DataProvider('providerNodeValues')]
   public function testCreate($data): void {
     // Create a node type for testing.
     $node_type = NodeType::create(['type' => 'article', 'name' => 'Article']);

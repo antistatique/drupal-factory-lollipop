@@ -4,12 +4,20 @@ namespace Drupal\Tests\factory_lollipop\Kernel\FactoryType;
 
 use Drupal\factory_lollipop\FactoryType\VocabularyFactoryType;
 use Drupal\KernelTests\Core\Entity\EntityKernelTestBase;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversMethod;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * @coversDefaultClass \Drupal\factory_lollipop\FactoryType\VocabularyFactoryType
  *
  * @group factory_lollipop
  */
+#[CoversClass(\Drupal\factory_lollipop\FactoryType\VocabularyFactoryType::class)]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\VocabularyFactoryType::class, 'create')]
+#[Group('factory_lollipop')]
+#[RunTestsInSeparateProcesses]
 class VocabularyFactoryTypeTest extends EntityKernelTestBase {
 
   /**

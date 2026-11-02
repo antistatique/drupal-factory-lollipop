@@ -6,12 +6,21 @@ use Drupal\Core\Language\LanguageInterface;
 use Drupal\factory_lollipop\FactoryType\TaxonomyTermFactoryType;
 use Drupal\KernelTests\Core\Entity\EntityKernelTestBase;
 use Drupal\taxonomy\Entity\Vocabulary;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversMethod;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * @coversDefaultClass \Drupal\factory_lollipop\FactoryType\TaxonomyTermFactoryType
  *
  * @group factory_lollipop
  */
+#[CoversClass(\Drupal\factory_lollipop\FactoryType\TaxonomyTermFactoryType::class)]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\TaxonomyTermFactoryType::class, 'create')]
+#[Group('factory_lollipop')]
+#[RunTestsInSeparateProcesses]
 class TaxonomyTermFactoryTypeTest extends EntityKernelTestBase {
 
   /**
@@ -44,6 +53,7 @@ class TaxonomyTermFactoryTypeTest extends EntityKernelTestBase {
    *
    * @dataProvider providerValues
    */
+  #[DataProvider('providerValues')]
   public function testCreate($data): void {
     // Create a Vocabulary for testing.
     $vocabulary = Vocabulary::create(['vid' => 'tags', 'name' => 'Tags']);

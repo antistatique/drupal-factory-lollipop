@@ -10,12 +10,21 @@ use Drupal\field\FieldStorageConfigInterface;
 use Drupal\KernelTests\Core\Entity\EntityKernelTestBase;
 use Drupal\node\Entity\NodeType;
 use Drupal\taxonomy\Entity\Vocabulary;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversMethod;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * @coversDefaultClass \Drupal\factory_lollipop\FactoryType\EntityFieldFactoryType
  *
  * @group factory_lollipop
  */
+#[CoversClass(\Drupal\factory_lollipop\FactoryType\EntityFieldFactoryType::class)]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\EntityFieldFactoryType::class, 'create')]
+#[Group('factory_lollipop')]
+#[RunTestsInSeparateProcesses]
 class EntityFieldFactoryTypeTest extends EntityKernelTestBase {
 
   /**
@@ -58,6 +67,8 @@ class EntityFieldFactoryTypeTest extends EntityKernelTestBase {
    * @dataProvider providerNodeFieldValues
    * @dataProvider providerTaxonomyFieldValues
    */
+  #[DataProvider('providerNodeFieldValues')]
+  #[DataProvider('providerTaxonomyFieldValues')]
   public function testCreate($data): void {
     // Create the field.
     $this->entityFieldFactoryTypeResolver->create((object) $data);

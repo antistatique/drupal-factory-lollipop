@@ -7,6 +7,9 @@ use Drupal\Core\Config\ImmutableConfig;
 use Drupal\Core\File\FileSystemInterface;
 use Drupal\factory_lollipop\FactoryType\FileFactoryType;
 use Drupal\Tests\UnitTestCase;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversMethod;
+use PHPUnit\Framework\Attributes\Group;
 use Prophecy\PhpUnit\ProphecyTrait;
 
 /**
@@ -14,6 +17,9 @@ use Prophecy\PhpUnit\ProphecyTrait;
  *
  * @group factory_lollipop
  */
+#[CoversClass(\Drupal\factory_lollipop\FactoryType\FileFactoryType::class)]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\FileFactoryType::class, 'shouldApply')]
+#[Group('factory_lollipop')]
 class FileFactoryTypeTest extends UnitTestCase {
 
   use ProphecyTrait;

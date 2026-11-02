@@ -6,12 +6,21 @@ use Drupal\Core\Language\LanguageInterface;
 use Drupal\factory_lollipop\FactoryType\MediaFactoryType;
 use Drupal\KernelTests\Core\Entity\EntityKernelTestBase;
 use Drupal\media\Entity\MediaType;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversMethod;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * @coversDefaultClass \Drupal\factory_lollipop\FactoryType\MediaFactoryType
  *
  * @group factory_lollipop
  */
+#[CoversClass(\Drupal\factory_lollipop\FactoryType\MediaFactoryType::class)]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\MediaFactoryType::class, 'create')]
+#[Group('factory_lollipop')]
+#[RunTestsInSeparateProcesses]
 class MediaFactoryTypeTest extends EntityKernelTestBase {
 
   /**
@@ -63,6 +72,7 @@ class MediaFactoryTypeTest extends EntityKernelTestBase {
    *
    * @dataProvider providerMediaValues
    */
+  #[DataProvider('providerMediaValues')]
   public function testCreate(array $data): void {
     /** @var \Drupal\media\Entity\Media $media */
     $media = $this->mediaFactoryTypeResolver->create((object) $data);

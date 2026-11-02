@@ -6,6 +6,9 @@ use Drupal\file\Entity\File as EntityFile;
 use Drupal\media\MediaInterface;
 use Drupal\media\Plugin\media\Source\File;
 use Drupal\Tests\factory_lollipop\Kernel\LollipopKernelTestBase;
+use PHPUnit\Framework\Attributes\CoversMethod;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * Example of Factory Lollipop usage for Media with fields.
@@ -13,6 +16,15 @@ use Drupal\Tests\factory_lollipop\Kernel\LollipopKernelTestBase;
  * @group factory_lollipop
  * @group factory_lollipop_example
  */
+#[CoversMethod(\Drupal\factory_lollipop\FixtureFactory::class, 'loadDefinitions')]
+#[CoversMethod(\Drupal\factory_lollipop\FixtureFactory::class, 'define')]
+#[CoversMethod(\Drupal\factory_lollipop\FixtureFactory::class, 'create')]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\MediaTypeFactoryType::class, 'create')]
+#[CoversMethod(\Drupal\factory_lollipop\FixtureFactory::class, 'association')]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\EntityFieldFactoryType::class, 'create')]
+#[Group('factory_lollipop')]
+#[Group('factory_lollipop_example')]
+#[RunTestsInSeparateProcesses]
 class MediaFieldFactoryTest extends LollipopKernelTestBase {
 
   /**

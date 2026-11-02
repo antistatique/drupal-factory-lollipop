@@ -3,6 +3,8 @@
 namespace Drupal\Tests\factory_lollipop\Functional;
 
 use Drupal\Tests\system\Functional\Module\ModuleTestBase;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * Tests install / uninstall of Factory Lollipop.
@@ -10,6 +12,9 @@ use Drupal\Tests\system\Functional\Module\ModuleTestBase;
  * @group factory_lollipop
  * @group factory_lollipop_functional
  */
+#[Group('factory_lollipop')]
+#[Group('factory_lollipop_functional')]
+#[RunTestsInSeparateProcesses]
 class InstallUninstallTest extends ModuleTestBase {
 
   /**

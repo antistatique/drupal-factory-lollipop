@@ -5,6 +5,9 @@ namespace Drupal\Tests\factory_lollipop_paragraphs_test\Kernel;
 use Drupal\entity_test\Entity\EntityTest;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\Tests\factory_lollipop\Kernel\LollipopKernelTestBase;
+use PHPUnit\Framework\Attributes\CoversMethod;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * Example of Factory Lollipop usage for Paragraph with entity reference fields.
@@ -14,6 +17,15 @@ use Drupal\Tests\factory_lollipop\Kernel\LollipopKernelTestBase;
  * @group factory_lollipop_example
  * @requires module paragraphs
  */
+#[CoversMethod(\Drupal\factory_lollipop\FixtureFactory::class, 'loadDefinitions')]
+#[CoversMethod(\Drupal\factory_lollipop\FixtureFactory::class, 'define')]
+#[CoversMethod(\Drupal\factory_lollipop\FixtureFactory::class, 'association')]
+#[CoversMethod(\Drupal\factory_lollipop\FixtureFactory::class, 'create')]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\EntityFieldEntityReferenceFactoryType::class, 'create')]
+#[Group('factory_lollipop')]
+#[Group('factory_lollipop_paragraphs')]
+#[Group('factory_lollipop_example')]
+#[RunTestsInSeparateProcesses]
 class ParagraphFieldEntityReferenceFactoryTest extends LollipopKernelTestBase {
 
   /**

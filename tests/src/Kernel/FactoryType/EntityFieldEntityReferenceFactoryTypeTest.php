@@ -11,12 +11,21 @@ use Drupal\field\FieldStorageConfigInterface;
 use Drupal\KernelTests\Core\Entity\EntityKernelTestBase;
 use Drupal\node\Entity\NodeType;
 use Drupal\taxonomy\Entity\Vocabulary;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversMethod;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * @coversDefaultClass \Drupal\factory_lollipop\FactoryType\EntityFieldEntityReferenceFactoryType
  *
  * @group factory_lollipop
  */
+#[CoversClass(\Drupal\factory_lollipop\FactoryType\EntityFieldEntityReferenceFactoryType::class)]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\EntityFieldEntityReferenceFactoryType::class, 'create')]
+#[Group('factory_lollipop')]
+#[RunTestsInSeparateProcesses]
 class EntityFieldEntityReferenceFactoryTypeTest extends EntityKernelTestBase {
 
   /**
@@ -58,6 +67,8 @@ class EntityFieldEntityReferenceFactoryTypeTest extends EntityKernelTestBase {
    * @dataProvider providerNodeFieldValues
    * @dataProvider providerTaxonomyFieldValues
    */
+  #[DataProvider('providerNodeFieldValues')]
+  #[DataProvider('providerTaxonomyFieldValues')]
   public function testCreate($data): void {
     // Create the field.
     $this->entityFieldEntityReferenceFactoryTypeResolver->create((object) $data);

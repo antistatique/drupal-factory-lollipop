@@ -3,6 +3,10 @@
 namespace Drupal\Tests\factory_lollipop_test\Kernel;
 
 use Drupal\Tests\factory_lollipop\Kernel\LollipopKernelTestBase;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversMethod;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * @coversDefaultClass \Drupal\factory_lollipop\FixtureFactory
@@ -10,6 +14,13 @@ use Drupal\Tests\factory_lollipop\Kernel\LollipopKernelTestBase;
  * @group factory_lollipop
  * @group factory_lollipop_example
  */
+#[CoversClass(\Drupal\factory_lollipop\FixtureFactory::class)]
+#[CoversMethod(\Drupal\factory_lollipop\FixtureFactory::class, 'loadAllDefinitions')]
+#[CoversMethod(\Drupal\factory_lollipop\FixtureFactory::class, 'getDefinitions')]
+#[CoversMethod(\Drupal\factory_lollipop\FixtureFactory::class, 'loadDefinitions')]
+#[Group('factory_lollipop')]
+#[Group('factory_lollipop_example')]
+#[RunTestsInSeparateProcesses]
 class FixtureFactoryTest extends LollipopKernelTestBase {
 
   /**

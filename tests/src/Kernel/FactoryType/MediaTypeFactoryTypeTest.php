@@ -11,12 +11,21 @@ use Drupal\media\Plugin\media\Source\File;
 use Drupal\media\Plugin\media\Source\Image;
 use Drupal\media\Plugin\media\Source\OEmbedInterface;
 use Drupal\media\Plugin\media\Source\VideoFile;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversMethod;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * @coversDefaultClass \Drupal\factory_lollipop\FactoryType\MediaTypeFactoryType
  *
  * @group factory_lollipop
  */
+#[CoversClass(\Drupal\factory_lollipop\FactoryType\MediaTypeFactoryType::class)]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\MediaTypeFactoryType::class, 'create')]
+#[Group('factory_lollipop')]
+#[RunTestsInSeparateProcesses]
 class MediaTypeFactoryTypeTest extends EntityKernelTestBase {
 
   /**
@@ -50,6 +59,7 @@ class MediaTypeFactoryTypeTest extends EntityKernelTestBase {
    *
    * @dataProvider providerMediaTypeValues
    */
+  #[DataProvider('providerMediaTypeValues')]
   public function testCreate(array $data, string $expected_source_class, string $expected_source_field): void {
     $media_type = $this->mediaTypeFactoryTypeResolver->create((object) [
       'id' => 'camelids',

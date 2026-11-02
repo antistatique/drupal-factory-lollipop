@@ -7,12 +7,25 @@ use Drupal\factory_lollipop\FixtureFactory;
 use Drupal\factory_lollipop\Resolver\ChainFactoryResolver;
 use Drupal\factory_lollipop\Resolver\ChainFactoryTypeResolver;
 use Drupal\Tests\UnitTestCase;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversMethod;
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * @coversDefaultClass \Drupal\factory_lollipop\FixtureFactory
  *
  * @group factory_lollipop
  */
+#[CoversClass(\Drupal\factory_lollipop\FixtureFactory::class)]
+#[CoversMethod(\Drupal\factory_lollipop\FixtureFactory::class, 'create')]
+#[CoversMethod(\Drupal\factory_lollipop\FixtureFactory::class, 'define')]
+#[CoversMethod(\Drupal\factory_lollipop\FixtureFactory::class, 'getDefinitions')]
+#[CoversMethod(\Drupal\factory_lollipop\FixtureFactory::class, 'getDefinition')]
+#[CoversMethod(\Drupal\factory_lollipop\FixtureFactory::class, 'getDefaultOptions')]
+#[CoversMethod(\Drupal\factory_lollipop\FixtureFactory::class, 'getType')]
+#[CoversMethod(\Drupal\factory_lollipop\FixtureFactory::class, 'association')]
+#[CoversMethod(\Drupal\factory_lollipop\FixtureFactory::class, 'sequence')]
+#[Group('factory_lollipop')]
 class FixtureFactoryTest extends UnitTestCase {
 
   /**

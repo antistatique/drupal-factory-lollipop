@@ -3,12 +3,33 @@
 namespace Drupal\Tests\factory_lollipop\Kernel\FactoryType;
 
 use Drupal\KernelTests\Core\Entity\EntityKernelTestBase;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversMethod;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * @coversDefaultClass \Drupal\factory_lollipop\FixtureFactory
  *
  * @group factory_lollipop
  */
+#[CoversClass(\Drupal\factory_lollipop\FixtureFactory::class)]
+#[CoversMethod(\Drupal\factory_lollipop\FixtureFactory::class, 'association')]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\NodeTypeFactoryType::class, 'getIdentifier')]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\NodeFactoryType::class, 'getIdentifier')]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\VocabularyFactoryType::class, 'getIdentifier')]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\TaxonomyTermFactoryType::class, 'getIdentifier')]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\FileFactoryType::class, 'getIdentifier')]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\MediaTypeFactoryType::class, 'getIdentifier')]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\MediaFactoryType::class, 'getIdentifier')]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\UserFactoryType::class, 'getIdentifier')]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\RoleFactoryType::class, 'getIdentifier')]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\MenuFactoryType::class, 'getIdentifier')]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\MenuLinkFactoryType::class, 'getIdentifier')]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\EntityFieldFactoryType::class, 'getIdentifier')]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\EntityFieldEntityReferenceFactoryType::class, 'getIdentifier')]
+#[Group('factory_lollipop')]
+#[RunTestsInSeparateProcesses]
 class FixtureFactoryTest extends EntityKernelTestBase {
 
   /**
