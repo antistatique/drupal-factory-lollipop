@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - feat: add logo.png for project browser
 
+### Fixed
+- build: allow the symfony/runtime composer plugin required by Drupal 11.4
+
 ## [1.2.5] - 2026-02-13
 ### Added
 - add official support of drupal 10.6
