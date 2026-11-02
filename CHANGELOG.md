@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - feat: add logo.png for project browser
+- ci: allow manually triggering the CI workflow
 
 ### Fixed
 - fix(ci): use the PHPMD 3 `analyze` command
