@@ -7,6 +7,11 @@ use Drupal\Core\Config\ImmutableConfig;
 use Drupal\Core\File\FileSystemInterface;
 use Drupal\factory_lollipop\FactoryType\FileFactoryType;
 use Drupal\KernelTests\Core\Entity\EntityKernelTestBase;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversMethod;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 use Prophecy\PhpUnit\ProphecyTrait;
 
 /**
@@ -14,6 +19,10 @@ use Prophecy\PhpUnit\ProphecyTrait;
  *
  * @group factory_lollipop
  */
+#[CoversClass(\Drupal\factory_lollipop\FactoryType\FileFactoryType::class)]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\FileFactoryType::class, 'create')]
+#[Group('factory_lollipop')]
+#[RunTestsInSeparateProcesses]
 class FileFactoryTypeTest extends EntityKernelTestBase {
 
   use ProphecyTrait;
@@ -172,6 +181,7 @@ class FileFactoryTypeTest extends EntityKernelTestBase {
    *
    * @dataProvider providerFileValues
    */
+  #[DataProvider('providerFileValues')]
   public function testCreate($filename, $expected): void {
     $file_path = $this->root . '/core/tests/fixtures/files/' . $filename;
     $file = $this->fileFactoryTypeResolver->create((object) ['path' => $file_path]);

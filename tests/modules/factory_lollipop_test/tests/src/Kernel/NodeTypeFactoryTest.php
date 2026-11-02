@@ -5,6 +5,9 @@ namespace Drupal\Tests\factory_lollipop_test\Kernel;
 use Drupal\node\Entity\NodeType;
 use Drupal\node\NodeTypeInterface;
 use Drupal\Tests\factory_lollipop\Kernel\LollipopKernelTestBase;
+use PHPUnit\Framework\Attributes\CoversMethod;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * Example of Factory Lollipop usage for Node Type.
@@ -12,6 +15,13 @@ use Drupal\Tests\factory_lollipop\Kernel\LollipopKernelTestBase;
  * @group factory_lollipop
  * @group factory_lollipop_example
  */
+#[CoversMethod(\Drupal\factory_lollipop\FixtureFactory::class, 'loadDefinitions')]
+#[CoversMethod(\Drupal\factory_lollipop\FixtureFactory::class, 'define')]
+#[CoversMethod(\Drupal\factory_lollipop\FixtureFactory::class, 'create')]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\NodeTypeFactoryType::class, 'create')]
+#[Group('factory_lollipop')]
+#[Group('factory_lollipop_example')]
+#[RunTestsInSeparateProcesses]
 class NodeTypeFactoryTest extends LollipopKernelTestBase {
 
   /**

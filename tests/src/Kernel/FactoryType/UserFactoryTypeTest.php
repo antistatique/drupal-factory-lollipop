@@ -5,12 +5,20 @@ namespace Drupal\Tests\factory_lollipop\Kernel\FactoryType;
 use Drupal\factory_lollipop\FactoryType\UserFactoryType;
 use Drupal\KernelTests\Core\Entity\EntityKernelTestBase;
 use Drupal\user\Entity\Role;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversMethod;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * @coversDefaultClass \Drupal\factory_lollipop\FactoryType\UserFactoryType
  *
  * @group factory_lollipop
  */
+#[CoversClass(\Drupal\factory_lollipop\FactoryType\UserFactoryType::class)]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\UserFactoryType::class, 'create')]
+#[Group('factory_lollipop')]
+#[RunTestsInSeparateProcesses]
 class UserFactoryTypeTest extends EntityKernelTestBase {
 
   /**

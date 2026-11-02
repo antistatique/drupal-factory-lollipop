@@ -4,6 +4,9 @@ namespace Drupal\Tests\factory_lollipop_paragraphs\Unit\FactoryType;
 
 use Drupal\factory_lollipop_paragraphs\FactoryType\ParagraphFactoryType;
 use Drupal\Tests\UnitTestCase;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversMethod;
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * @coversDefaultClass \Drupal\factory_lollipop_paragraphs\FactoryType\ParagraphFactoryType
@@ -11,6 +14,10 @@ use Drupal\Tests\UnitTestCase;
  * @group factory_lollipop
  * @group factory_lollipop_paragraphs
  */
+#[CoversClass(\Drupal\factory_lollipop_paragraphs\FactoryType\ParagraphFactoryType::class)]
+#[CoversMethod(\Drupal\factory_lollipop_paragraphs\FactoryType\ParagraphFactoryType::class, 'shouldApply')]
+#[Group('factory_lollipop')]
+#[Group('factory_lollipop_paragraphs')]
 class ParagraphFactoryTypeTest extends UnitTestCase {
 
   /**

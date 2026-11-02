@@ -4,12 +4,18 @@ namespace Drupal\Tests\factory_lollipop\Unit\Resolver\FactoryType;
 
 use Drupal\factory_lollipop\FactoryType\MenuFactoryType;
 use Drupal\Tests\UnitTestCase;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversMethod;
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * @coversDefaultClass \Drupal\factory_lollipop\FactoryType\MenuFactoryType
  *
  * @group factory_lollipop
  */
+#[CoversClass(\Drupal\factory_lollipop\FactoryType\MenuFactoryType::class)]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\MenuFactoryType::class, 'shouldApply')]
+#[Group('factory_lollipop')]
 class MenuFactoryTypeTest extends UnitTestCase {
 
   /**

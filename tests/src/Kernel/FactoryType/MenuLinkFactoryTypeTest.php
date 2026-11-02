@@ -6,12 +6,20 @@ use Drupal\Core\Url;
 use Drupal\factory_lollipop\FactoryType\MenuLinkFactoryType;
 use Drupal\KernelTests\Core\Entity\EntityKernelTestBase;
 use Drupal\system\Entity\Menu;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversMethod;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * @coversDefaultClass \Drupal\factory_lollipop\FactoryType\MenuLinkFactoryType
  *
  * @group factory_lollipop
  */
+#[CoversClass(\Drupal\factory_lollipop\FactoryType\MenuLinkFactoryType::class)]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\MenuLinkFactoryType::class, 'create')]
+#[Group('factory_lollipop')]
+#[RunTestsInSeparateProcesses]
 class MenuLinkFactoryTypeTest extends EntityKernelTestBase {
 
   /**

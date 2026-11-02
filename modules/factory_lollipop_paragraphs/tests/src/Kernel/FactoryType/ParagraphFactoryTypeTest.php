@@ -5,6 +5,10 @@ namespace Drupal\Tests\factory_lollipop_paragraphs\Kernel\FactoryType;
 use Drupal\factory_lollipop_paragraphs\FactoryType\ParagraphFactoryType;
 use Drupal\KernelTests\Core\Entity\EntityKernelTestBase;
 use Drupal\paragraphs\Entity\ParagraphsType;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversMethod;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * @coversDefaultClass \Drupal\factory_lollipop_paragraphs\FactoryType\ParagraphFactoryType
@@ -12,6 +16,11 @@ use Drupal\paragraphs\Entity\ParagraphsType;
  * @group factory_lollipop
  * @group factory_lollipop_paragraphs
  */
+#[CoversClass(\Drupal\factory_lollipop_paragraphs\FactoryType\ParagraphFactoryType::class)]
+#[CoversMethod(\Drupal\factory_lollipop_paragraphs\FactoryType\ParagraphFactoryType::class, 'create')]
+#[Group('factory_lollipop')]
+#[Group('factory_lollipop_paragraphs')]
+#[RunTestsInSeparateProcesses]
 class ParagraphFactoryTypeTest extends EntityKernelTestBase {
 
   /**

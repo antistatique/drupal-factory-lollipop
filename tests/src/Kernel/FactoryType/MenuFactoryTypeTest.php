@@ -4,12 +4,20 @@ namespace Drupal\Tests\factory_lollipop\Kernel\FactoryType;
 
 use Drupal\factory_lollipop\FactoryType\MenuFactoryType;
 use Drupal\KernelTests\Core\Entity\EntityKernelTestBase;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversMethod;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * @coversDefaultClass \Drupal\factory_lollipop\FactoryType\MenuFactoryType
  *
  * @group factory_lollipop
  */
+#[CoversClass(\Drupal\factory_lollipop\FactoryType\MenuFactoryType::class)]
+#[CoversMethod(\Drupal\factory_lollipop\FactoryType\MenuFactoryType::class, 'create')]
+#[Group('factory_lollipop')]
+#[RunTestsInSeparateProcesses]
 class MenuFactoryTypeTest extends EntityKernelTestBase {
 
   /**
