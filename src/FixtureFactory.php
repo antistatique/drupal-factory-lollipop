@@ -18,31 +18,17 @@ class FixtureFactory {
   protected $definitions = [];
 
   /**
-   * The factory type resolver.
-   *
-   * @var \Drupal\factory_lollipop\Resolver\ChainFactoryTypeResolver
-   */
-  protected $chainFactoryTypeResolver;
-
-  /**
-   * The factories resolver.
-   *
-   * @var \Drupal\factory_lollipop\Resolver\ChainFactoryResolver
-   */
-  protected $chainFactoryResolver;
-
-  /**
    * Construct a new FixtureFactory object.
    *
-   * @param \Drupal\factory_lollipop\Resolver\ChainFactoryTypeResolver $chain_factory_type_resolver
+   * @param \Drupal\factory_lollipop\Resolver\ChainFactoryTypeResolver $chainFactoryTypeResolver
    *   The factory type resolver.
-   * @param \Drupal\factory_lollipop\Resolver\ChainFactoryResolver $chain_factory_resolver
+   * @param \Drupal\factory_lollipop\Resolver\ChainFactoryResolver $chainFactoryResolver
    *   The factories resolver.
    */
-  public function __construct(ChainFactoryTypeResolver $chain_factory_type_resolver, ChainFactoryResolver $chain_factory_resolver) {
-    $this->chainFactoryTypeResolver = $chain_factory_type_resolver;
-    $this->chainFactoryResolver = $chain_factory_resolver;
-  }
+  public function __construct(
+    protected ChainFactoryTypeResolver $chainFactoryTypeResolver,
+    protected ChainFactoryResolver $chainFactoryResolver,
+  ) {}
 
   /**
    * A method of registering factory definitions.

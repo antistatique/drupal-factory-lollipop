@@ -22,13 +22,6 @@ class FileFactoryType implements FactoryTypeInterface {
   protected $systemFileConfig;
 
   /**
-   * The file system service.
-   *
-   * @var \Drupal\Core\File\FileSystem
-   */
-  protected $fileSystem;
-
-  /**
    * The entity type manager.
    *
    * @var \Drupal\Core\Entity\EntityTypeManagerInterface|null
@@ -40,12 +33,14 @@ class FileFactoryType implements FactoryTypeInterface {
    *
    * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
    *   The config factory.
-   * @param \Drupal\Core\File\FileSystemInterface $file_system
+   * @param \Drupal\Core\File\FileSystemInterface $fileSystem
    *   The file system service.
    */
-  public function __construct(ConfigFactoryInterface $config_factory, FileSystemInterface $file_system) {
+  public function __construct(
+    ConfigFactoryInterface $config_factory,
+    protected FileSystemInterface $fileSystem,
+  ) {
     $this->systemFileConfig = $config_factory->get('system.file');
-    $this->fileSystem = $file_system;
   }
 
   /**
