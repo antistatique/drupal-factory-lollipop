@@ -5,27 +5,16 @@
  * Contains includes hook to generate help page.
  */
 
+use Drupal\Core\Hook\Attribute\LegacyHook;
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\factory_lollipop\Hook\FactoryLollipopHelpHook;
 
 /**
  * Implements hook_help().
+ *
+ * Legacy shim for Drupal < 11.1, see FactoryLollipopHelpHook.
  */
+#[LegacyHook]
 function factory_lollipop_help($route_name, RouteMatchInterface $route_match) {
-  if ($route_name !== 'help.page.factory_lollipop') {
-    return NULL;
-  }
-
-  $text = file_get_contents(__DIR__ . '/README.md');
-
-  if (!\Drupal::moduleHandler()->moduleExists('markdown')) {
-    return '<pre>' . $text . '</pre>';
-  }
-
-  // Use the Markdown filter to render the README.
-  $filter_manager = \Drupal::service('plugin.manager.filter');
-  $settings = \Drupal::configFactory()->get('markdown.settings')->getRawData();
-  $config = ['settings' => $settings];
-  $filter = $filter_manager->createInstance('markdown', $config);
-
-  return $filter->process($text, 'en');
+  return \Drupal::service(FactoryLollipopHelpHook::class)($route_name, $route_match);
 }
