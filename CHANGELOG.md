@@ -30,6 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - fix: remove deprecated ConfigEntityInterface::trustData() call
 - fix: replace the obsolete docker-compose command by docker compose
 - fix(phpcs): remove the stray `>` after the exclude patterns
+- fix(cspell): add codesniffer to the project dictionary
 
 ## [1.2.5] - 2026-02-13
 ### Added
