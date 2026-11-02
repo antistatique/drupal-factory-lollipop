@@ -67,3 +67,4 @@ rulesets
 Unexisting
 unusedcode
 unvalidated
+codesniffer
