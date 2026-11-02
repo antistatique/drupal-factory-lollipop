@@ -1,8 +1,5 @@
 wengerk
-phpcf
-phpdd
 phpcpd
-wapmorgan
 phactory
 metus
 molestie
