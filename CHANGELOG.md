@@ -15,6 +15,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ci: run Upgrade Status on Drupal 11.3 to report Drupal 12 readiness
 - docs(readme): update the supported Drupal versions
 - refactor: use constructor property promotion
+- ci: test Drupal 11.4 as a stable version
+- build(docker): use Drupal 11.4 as default base image
+- ci: run Upgrade Status on Drupal 11.4
 
 ### Removed
 - ci: remove PhpDeprecationDetector (phpdd) job, tool and docs
